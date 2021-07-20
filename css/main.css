@@ -40,7 +40,8 @@
 
 body{
    color:var(--gris20);
-   font-family: charter,  sans-serif;
+   /* font-family: charter,  sans-serif; */
+   font-family: 'Roboto', sans-serif;
 }
 
 a{
