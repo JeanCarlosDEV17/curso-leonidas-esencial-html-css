@@ -1,0 +1,75 @@
+@font-face {
+   font-family: charter;
+   src: url('../fonts/charter-regular.otf');
+   font-style: normal;
+   font-weight: 400;
+}
+@font-face {
+   font-family: charter;
+   src: url('../fonts/charter-italic.otf');
+   font-style: italic;
+   font-weight: 400;
+}
+@font-face {
+   font-family: charter;
+   src: url('../fonts/charter-bold.otf');
+   font-style: normal;
+   font-weight: bold;
+}
+@font-face {
+   font-family: charter;
+   src: url('../fonts/charter-bold-italic.otf');
+   font-style: italic;
+   font-weight: bold;
+}
+/* *  {
+   font-family: roboto, sans-serif;
+   
+   
+} */
+
+:root{
+   font-size: 16px;
+   --gris40:#212121;
+   --gris30:#212429;
+   --gris20:#424242;
+   --gris10:#616161;
+    /* es importante que por cada color identifiquemos cada una de las 
+      tonalidades usadas de ese color par formar una escala  */
+}
+
+body{
+   color:var(--gris20);
+   font-family: charter,  sans-serif;
+}
+
+a{
+   color:var(--gris20);
+
+}
+/* HEADER */
+header{
+   font-size: 14px;
+   
+}
+header a{
+   color: var(--gris10);
+   font-weight: 400;
+   text-decoration: none;
+}
+header a:hover{
+   color:var(--gris40);
+}
+header summary{
+   font-weight: 700;
+}
+h1{
+   font-size:60px;
+   /* font-size:3.75em; */
+}
+h2{
+   font-size:2em;
+}
+h3{
+   font: size 1.5em;;
+}
