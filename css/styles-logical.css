@@ -1,0 +1,167 @@
+@font-face {
+   font-family: charter;
+   src: url("../fonts/charter-regular.otf");
+   font-style: normal;
+   font-weight: 400;
+}
+@font-face {
+   font-family: charter;
+   src: url("../fonts/charter-italic.otf");
+   font-style: italic;
+   font-weight: 400;
+}
+@font-face {
+   font-family: charter;
+   src: url("../fonts/charter-bold.otf");
+   font-style: normal;
+   font-weight: bold;
+}
+@font-face {
+   font-family: charter;
+   src: url("../fonts/charter-bold-italic.otf");
+   font-style: italic;
+   font-weight: bold;
+}
+/* *  {
+   font-family: roboto, sans-serif;
+   
+   
+} */
+
+:root {
+   font-size: 16px;
+   --gris40: #212121;
+   --gris30: #212429;
+   --gris20: #424242;
+   --gris10: #616161;
+   /* es importante que por cada color identifiquemos cada una de las 
+      tonalidades usadas de ese color par formar una escala  */
+}
+.hero {
+   background: linear-gradient(to top, #ffffff55, transparent 35%), url("../images/patron-1.png");
+
+   /* background: url('../images/patron-1.png') no-repeat top right ,  url('../images/figma.png') no-repeat top left #616161 ;
+   background-size: contain,250px 100px; */
+   height: 350px;
+}
+
+body {
+   color: var(--gris20);
+   /* font-family: charter,  sans-serif; */
+   font-family: "Roboto", sans-serif;
+   margin: 0px;
+   
+}
+
+a {
+   color: var(--gris20);
+}
+/* HEADER */
+header {
+   font-size: 14px;
+   margin-left: 7.25rem;
+   /* margin-top: 4rem; */
+}
+header a {
+   color: var(--gris10);
+   font-weight: 400;
+   text-decoration: none;
+}
+header a:hover {
+   color: var(--gris40);
+}
+header summary {
+   font-weight: 700;
+}
+main {
+   margin-left: 2.75rem;
+}
+
+/* Introduccion  */
+h1 {
+   font-size: 60px;
+   /* font-size:3.75em; */
+   /* margin: 4rem 3.2rem  1rem 0; */
+   margin: 4rem 0 1rem 0;
+}
+main h1 + p {
+   /* margin-right: 7.25rem; */
+   margin-bottom: 4rem;
+}
+hr {
+   margin: 4rem 0;
+   border: 1px var(--gris10) solid;
+}
+
+/* Seccion de SETUP */
+.section-content h2 {
+   font-size: 2em;
+   margin: 4rem 0 2.5rem 0;
+   /* margin-bottom: 0; */
+   font-weight: normal;
+}
+.section-content h3 {
+   font-size: 1.5em;
+   margin-top: 1rem;
+   margin-bottom: 1.5rem;
+   font-weight: normal;
+}
+.icon-setup {
+   margin-top: 2rem;
+}
+.section-content blockquote {
+   margin: 2rem 0;
+   border-left: 4px solid var(--gris40);
+   padding-left: 0.8rem;
+}
+.section-content blockquote p:last-of-type {
+   color: var(--gris10);
+}
+.section-content + hr {
+   display: none;
+   margin: 2rem 0;
+}
+
+/*seccion de ejemplo de codigo */
+pre code {
+   display: block;
+   background-color: #fec62e;
+   color: #000000;
+   font-family: roboto, sans-serif;
+   line-height: 24px;
+   font-weight: 400;
+}
+/*div del patron de diseño del top de la pagina*/
+
+.section-content h3 {
+   counter-increment: titleList;
+}
+.section-content h3::before {
+   content: counter(titleList) ". ";
+   /* padding-right: 10px; */
+}
+
+.section-content h3::after {
+   content: "";
+   width: 32px;
+   height: 4px;
+   background-color: var(--gris20);
+   display: block;
+}
+
+.des-web img {
+   width: 100%;
+   margin-bottom: 2.5rem;
+   /* margin: 0 5% 0 5%; */
+}
+
+.section-content ul li {
+   margin-bottom: 1rem;
+}
+
+.section-content li p {
+   line-height: 24px;
+}
+.des-web img:last-of-type{
+   margin-bottom: 7.7rem;
+}
