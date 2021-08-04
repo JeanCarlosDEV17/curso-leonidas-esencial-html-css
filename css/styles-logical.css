@@ -37,6 +37,8 @@
    /* es importante que por cada color identifiquemos cada una de las 
       tonalidades usadas de ese color par formar una escala  */
 }
+
+/*div del patron de diseño del top de la pagina*/
 .hero {
    background: linear-gradient(to top, #ffffff55, transparent 35%), url("../images/patron-1.png");
 
@@ -47,10 +49,9 @@
 
 body {
    color: var(--gris20);
-   /* font-family: charter,  sans-serif; */
    font-family: "Roboto", sans-serif;
    margin: 0px;
-   
+   min-width: 420px;
 }
 
 a {
@@ -59,8 +60,19 @@ a {
 /* HEADER */
 header {
    font-size: 14px;
-   margin-left: 7.25rem;
+   /* margin-left: 1.25rem; */
    /* margin-top: 4rem; */
+   position: sticky;
+   
+   left: 0;
+   top: 0;
+   border: 2px solid red;
+}
+.content-header {
+   position: absolute;
+   left: 4.25rem;
+   top: 4rem;
+   width: 208px;
 }
 header a {
    color: var(--gris10);
@@ -72,14 +84,31 @@ header a:hover {
 }
 header summary {
    font-weight: 700;
+   margin-left: 0rem;
+   padding-left: 0;
 }
-main {
-   margin-left: 2.75rem;
+details {
+   padding-left: 0;
+   margin-left: 0;
+}
+details ol {
+   padding-left: 1rem;
+}
+header li{
+   margin-bottom: 1rem;;
+}
+.main {
+}
+.wrapper {
+   margin-left: 19rem;
+   margin-right: 7rem;
+   min-width: 300px;
 }
 
 /* Introduccion  */
 h1 {
    font-size: 60px;
+   font-weight: normal;
    /* font-size:3.75em; */
    /* margin: 4rem 3.2rem  1rem 0; */
    margin: 4rem 0 1rem 0;
@@ -105,17 +134,26 @@ hr {
    margin-top: 1rem;
    margin-bottom: 1.5rem;
    font-weight: normal;
+   padding: 4px;
+   position: sticky;
+   top: 0px;
+   background-color: white;
 }
 .icon-setup {
    margin-top: 2rem;
 }
 .section-content blockquote {
    margin: 2rem 0;
+   font-size: 1.5rem;
    border-left: 4px solid var(--gris40);
-   padding-left: 0.8rem;
+   padding-left: 1rem;
+   line-height: 1.5rem;
 }
 .section-content blockquote p:last-of-type {
    color: var(--gris10);
+}
+.section-content blockquote p:last-of-type::before {
+   content: "- ";
 }
 .section-content + hr {
    display: none;
@@ -130,11 +168,15 @@ pre code {
    font-family: roboto, sans-serif;
    line-height: 24px;
    font-weight: 400;
+   padding: 40px;
 }
-/*div del patron de diseño del top de la pagina*/
+.des-web h3 {
+   margin-top: 2.5rem;
+}
 
 .section-content h3 {
    counter-increment: titleList;
+   padding-bottom: 8px;
 }
 .section-content h3::before {
    content: counter(titleList) ". ";
@@ -146,7 +188,12 @@ pre code {
    width: 32px;
    height: 4px;
    background-color: var(--gris20);
-   display: block;
+   /* display: block; */
+   position: absolute;
+   left: 0;
+   bottom: 0;
+
+   min-width: 100%;
 }
 
 .des-web img {
@@ -162,6 +209,6 @@ pre code {
 .section-content li p {
    line-height: 24px;
 }
-.des-web img:last-of-type{
+.des-web img:last-of-type {
    margin-bottom: 7.7rem;
 }
