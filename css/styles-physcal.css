@@ -37,7 +37,12 @@
    /* es importante que por cada color identifiquemos cada una de las 
       tonalidades usadas de ese color par formar una escala  */
 }
-
+.debug{
+   box-shadow: inset 0 0 0 3px red;
+   outline: 3px solid red;
+   background-color: red;
+   border: 3px solid red !important;
+}
 body {
    color: var(--gris20);
    /* font-family: charter,  sans-serif; */
