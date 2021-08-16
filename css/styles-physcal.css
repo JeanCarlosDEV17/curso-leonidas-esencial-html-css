@@ -4,24 +4,28 @@
    font-style: normal;
    font-weight: 400;
 }
+
 @font-face {
    font-family: charter;
    src: url("../fonts/charter-italic.otf");
    font-style: italic;
    font-weight: 400;
 }
+
 @font-face {
    font-family: charter;
    src: url("../fonts/charter-bold.otf");
    font-style: normal;
    font-weight: bold;
 }
+
 @font-face {
    font-family: charter;
    src: url("../fonts/charter-bold-italic.otf");
    font-style: italic;
    font-weight: bold;
 }
+
 /* *  {
    font-family: roboto, sans-serif;
    
@@ -37,76 +41,231 @@
    /* es importante que por cada color identifiquemos cada una de las 
       tonalidades usadas de ese color par formar una escala  */
 }
-.debug{
-   box-shadow: inset 0 0 0 3px red;
-   outline: 3px solid red;
-   background-color: red;
-   border: 3px solid red !important;
-}
-body {
-   color: var(--gris20);
-   /* font-family: charter,  sans-serif; */
-   font-family: "Roboto", sans-serif;
+
+html {
+   scroll-behavior: smooth;
 }
 
-a {
-   color: var(--gris20);
-}
-/* HEADER */
-header {
-   font-size: 14px;
-}
-header a {
-   color: var(--gris10);
-   font-weight: 400;
-   text-decoration: none;
-}
-header a:hover {
-   color: var(--gris40);
-}
-header summary {
-   font-weight: 700;
-}
-h1 {
-   font-size: 60px;
-   /* font-size:3.75em; */
-}
-h2 {
-   font-size: 2em;
-}
-h3 {
-   font-size: 1.5em;
-}
-
-/*seccion de ejemplo de codigo */
-pre code {
-   display: block;
-   background-color: #fec62e;
-}
 /*div del patron de diseño del top de la pagina*/
-
 .hero {
-   background: linear-gradient(to top, #ffffff55 , transparent 35%), url('../images/patron-1.png');
+   background: linear-gradient(to top, #ffffff55, transparent 35%), url("../images/patron-1.png");
 
    /* background: url('../images/patron-1.png') no-repeat top right ,  url('../images/figma.png') no-repeat top left #616161 ;
    background-size: contain,250px 100px; */
    height: 350px;
 }
 
-.section-content h3{
-   counter-increment: titleList;
+body {
+   color: var(--gris20);
+   font-family: "Roboto", sans-serif;
+   margin: 0px;
+   min-width: 420px;
 }
-.section-content h3::before{
 
-   content: counter(titleList) '. ' ;
+a {
+   color: var(--gris20);
+}
+
+/* HEADER */
+header {
+   font-size: 14px;
+   /* margin-left: 1.25rem; */
+   /* margin-top: 4rem; */
+   position: sticky;
+
+   left: 0;
+   top: 0;
+   /* border: 2px solid red; */
+}
+
+.content-header {
+   position: absolute;
+   left: 4.25rem;
+   top: 4rem;
+   width: 208px;
+}
+
+header a {
+   color: var(--gris10);
+   font-weight: 400;
+   text-decoration: none;
+}
+
+header a:hover {
+   color: var(--gris40);
+}
+
+header summary {
+   font-weight: 700;
+   margin-left: 0rem;
+   padding-left: 0;
+}
+
+details {
+   padding-left: 0;
+   margin-left: 0;
+   margin-bottom: 1.5rem;
+}
+
+details ol {
+   padding-left: 1rem;
+}
+
+header li {
+   margin-bottom: 1rem;
+}
+
+.main {
+}
+
+.wrapper {
+   margin-left: 19rem;
+   margin-right: 7rem;
+   min-width: 600px;
+}
+
+/* Introduccion  */
+h1 {
+   font-size: 60px;
+   font-weight: normal;
+   /* font-size:3.75em; */
+   /* margin: 4rem 3.2rem  1rem 0; */
+   margin: 4rem 0 1rem 0;
+}
+
+main h1 + p {
+   /* margin-right: 7.25rem; */
+   margin-bottom: 4rem;
+}
+
+hr {
+   margin: 4rem 0;
+   border: 1px #61616133 solid;
+}
+
+.debug {
+   box-shadow: inset 0 0 0 3px red;
+   outline: 3px solid red;
+   background-color: red;
+   border: 3px solid red !important;
+}
+/* Seccion de SETUP */
+.section-content h2 {
+   font-size: 2em;
+   margin: 4rem 0 2.5rem 0;
+   /* margin-bottom: 0; */
+   font-weight: normal;
+}
+
+.section-content h3 {
+   margin: 0;
+   font-size: 1.5em;
+   /* margin-top: 1rem;
+   margin-bottom: 1.5rem; */
+   font-weight: normal;
+   padding: 4px;
+   padding-bottom: 8px;
+   position: relative;
+   background-color: white;
+   display: inline-block;
+}
+
+.section-content .h3-content {
+   counter-increment: titleList;
+   margin-top: 1rem;
+   margin-bottom: 1.5rem;
+   /* position: relative; */
+   top: 0px;
+   left: 0;
+   background-color: white;
+}
+
+.section-content h3::before {
+   content: counter(titleList) ". ";
    /* padding-right: 10px; */
 }
 
-.section-content h3::after{
-   content: '';
+.section-content h3::after {
+   /* border: 2px solid red; */
+   content: "" /* !important */;
    width: 32px;
    height: 4px;
    background-color: var(--gris20);
-   display: block;
+   /* display: block; */
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   height: 4px;
+   min-width: 100%;
+}
 
+.icon-setup {
+   margin-top: 2rem;
+}
+
+.section-content blockquote {
+   margin: 2rem 0;
+   font-size: 1.5rem;
+   border-left: 4px solid var(--gris40);
+   padding-left: 1rem;
+   line-height: 1.5rem;
+}
+
+.section-content blockquote p:last-of-type {
+   color: var(--gris10);
+}
+
+.section-content blockquote p:last-of-type::before {
+   content: "- ";
+}
+
+.section-content + hr {
+   display: none;
+   margin: 2rem 0;
+}
+
+/*seccion de ejemplo de codigo */
+pre code {
+   display: block;
+   background-color: #fec62e;
+   color: #000000;
+   font-family: roboto, sans-serif;
+   line-height: 24px;
+   font-weight: 400;
+   padding: 40px;
+   min-width: 520px;
+}
+
+.des-web h3 {
+   margin: 0;
+}
+.des-web .h3-content {
+   margin-top: 2.5rem;
+}
+
+.des-web img {
+   width: 100%;
+   margin-bottom: 2.5rem;
+   /* margin: 0 5% 0 5%; */
+}
+
+.section-content ul li {
+   margin-bottom: 1rem;
+}
+
+.section-content li p {
+   line-height: 24px;
+}
+
+.des-web img:last-of-type {
+   margin-bottom: 7.7rem;
+}
+
+.modelo-caja h3::before {
+   content: "";
+   /* padding-right: 10px; */
+}
+.modelo-caja h3::after {
+   content: none;
+   /* padding-right: 10px; */
 }
