@@ -6,12 +6,20 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link href="https://fonts.googleapis.com" rel="preconnect" />
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap"
+         rel="stylesheet"
+      />
+
       <link
          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
          rel="stylesheet"
       />
       <title>El Blog de Mi Primer Html</title>
-      <link href="./css/styles-physcal.css" rel="stylesheet" />
+      <link href="./css/styles-logical.css" rel="stylesheet" />
    </head>
 
    <body>
@@ -19,7 +27,7 @@
       <header>
          <div class="wrapper">
             <div class="content-header">
-               <nav>
+               <nav class="">
                   <h4>CONTENIDO</h4>
                   <details>
                      <summary>Setup</summary>
@@ -87,7 +95,7 @@
                   <h2 id="setup">Setup</h2>
                   <img
                      class="icon-setup"
-                     src="./images/google-chrome.png"
+                     src="./images/google-chrome-white.png"
                      title="Logo del navegador Google Chrome"
                      alt="Logo del navegador Google Chrome"
                   />
@@ -101,7 +109,7 @@
                   </p>
                   <img
                      class="icon-setup"
-                     src="./images/visual-studio-code.png"
+                     src="./images/visual-studio-code-white.png"
                      title=" Logo del editor de codigo Visual Studio Code"
                      alt="Logo del editor de codigo Visual Studio Code"
                   />
@@ -117,7 +125,7 @@
                   </p>
                   <img
                      class="icon-setup"
-                     src="./images/figma.png"
+                     src="./images/figma-white.png"
                      title="Logo del Programa de diseño figma"
                      alt="Logo de Figma "
                   />
@@ -131,7 +139,7 @@
                   </p>
                   <img
                      class="icon-setup"
-                     src="./images/github.png"
+                     src="./images/github-white.png"
                      title="Logo de pagina de gestion de repositorios GitHub"
                      alt="Logo de GitHub"
                   />
@@ -157,7 +165,7 @@
                      Conceptos esenciales del Desarrollo Web
                   </h2>
                   <div class="h3-content">
-                     <h3 id="html">¿Qué es HTML?</h3>
+                     <h3 id="html">HTML</h3>
                   </div>
                   <p>
                      Hyper Text Markup Language o Lenguaje de marcas Hipertexto. Es el componente
@@ -177,8 +185,8 @@
 
       &lt;/body&gt;
    &lt;/html&gt;
-</code>
-</pre>
+
+</code></pre>
                   <div class="h3-content">
                      <h3 id="etiquetas">Etiquetas</h3>
                   </div>
@@ -247,7 +255,7 @@
 
                <hr />
                <!-- Seccion de modelo de caja -->
-               <section class="section-content modelo-caja ">
+               <section class="section-content modelo-caja">
                   <h2 id="modelo-de-caja">Modelo de caja</h2>
                   <div class="h3-content">
                      <h3 id="el-modelo-de-caja-compuesto">El modelo de caja está compuesto por:</h3>
@@ -288,7 +296,7 @@
                      <h3>Modelo de caja</h3>
                   </div>
                   <div>
-                     <img
+                     <img class=""
                         src="./images/propiedades-fisicas-modelo-de-caja.png"
                         title="propiedades fisicas modelo de caja"
                         alt="Imagen de ejemplo propiedades fisicas modelo de caja"
@@ -299,16 +307,31 @@
                      <a href="mailto:me@leonidasesteban.com"> me@leonidasesteban.com </a>
                   </p>
                </section>
+               <div class="formulario-contacto">
+                  <h3>Suscríbete a nuestro newsletter</h3>
+                  <form>
+                     <input type="text" name="nombre" placeholder="Nombre" />
+                     <input type="email" name="email" placeholder="Correo electrónico" />
+                     <button type="submit">Suscribirme</button>
+                  </form>
+               </div>
             </div>
          </div>
       </main>
       <footer>
          <div class="wrapper">
-           <div class="content-footer">
+            <div class="content-footer">
                <p>
-                  © Leonidas Esteban 2021 <span>instagram</span><span>Facebook</span><span>twitter</span>
+                  © Leonidas Esteban 2021
+                  <span>
+                     
+                        <img src="./images/instagram-logo.png" alt=" icono logo de instrgram" />
+                        <img src="./images/facebook-logo.png" alt="icono logo de facebook" />
+                        <img src="./images/twitter-logo.png" alt="" />
+                     
+                  </span>
                </p>
-           </div>
+            </div>
          </div>
       </footer>
    </body>

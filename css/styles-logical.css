@@ -30,10 +30,11 @@
 
 :root {
    font-size: 16px;
-   --gris40: #212121;
-   --gris30: #212429;
-   --gris20: #424242;
-   --gris10: #616161;
+   --blanco20: #FFFFFF;
+   --blanco10: #A5A3A5;
+
+   --gris20: #212429;
+   --gris10:#3A3539;
    /* es importante que por cada color identifiquemos cada una de las 
       tonalidades usadas de ese color par formar una escala  */
 }
@@ -43,57 +44,163 @@
    background-color: red;
    border: 3px solid red !important;
 }
+html{
+   background-color: #FFFFFF;
+   scroll-behavior: smooth;
+}
 body {
-   color: var(--gris20);
+   color: var(--blanco10);
    /* font-family: charter,  sans-serif; */
-   font-family: "Roboto", sans-serif;
+   font-family: 'Nunito', "Roboto", sans-serif;
+   background-color: #251F24;
+   /* line-height: 24px; */
 }
 
 a {
-   color: var(--gris20);
-}
-/* HEADER */
-header {
-   font-size: 14px;
-}
-header a {
-   color: var(--gris10);
-   font-weight: 400;
-   text-decoration: none;
-}
-header a:hover {
-   color: var(--gris40);
-}
-header summary {
-   font-weight: 700;
-}
-h1 {
-   font-size: 60px;
-   /* font-size:3.75em; */
-}
-h2 {
-   font-size: 2em;
-}
-h3 {
-   font-size: 1.5em;
+   color: var(--blanco10);
 }
 
-/*seccion de ejemplo de codigo */
-pre code {
-   display: block;
-   background-color: #fec62e;
-}
 /*div del patron de diseño del top de la pagina*/
-
 .hero {
-   background: linear-gradient(to top, #ffffff55 , transparent 35%), url('../images/patron-1.png');
+   background:  linear-gradient(96deg, #314755 30%, #26A0DA 102%);
+  
 
    /* background: url('../images/patron-1.png') no-repeat top right ,  url('../images/figma.png') no-repeat top left #616161 ;
    background-size: contain,250px 100px; */
+   width: 100%;
    height: 350px;
 }
 
-.section-content h3{
+
+/* HEADER */
+header {
+   font-size: 14px;
+   position: relative;
+}
+header a {
+   color: var(--blanco10);
+   font-weight: 400;
+   text-decoration: none;
+   line-height: 1.5rem;
+}
+header a:hover {
+   color: var(--blanco20);
+}
+header summary {
+   font-weight: 700;
+   color: var(--blanco20);
+   line-height: 1.5rem;
+}
+h1 {
+   color: var(--blanco20);
+   font-size: 4rem;
+   font-weight: 600;
+   /* font-size:3.75em; */
+}
+h2 {
+   color: var(--blanco20);
+   font-size: 2.5em;
+   font-weight: 600;
+}
+h3 {
+   color: var(--blanco20);
+   font-size: 2em;
+   font-weight: 600;
+}
+
+h4{
+   font-weight: 700;
+   font-size: 0.9rem;
+   color: var(--blanco20);
+}
+
+.content-header{
+   
+position: absolute;
+left: 20px;
+top:64px
+}
+.content-header nav{
+   /* position: absolute; */
+   
+   position: sticky;
+   top: 0;
+   left: -100px;
+   width: 250px;
+   font-size: 14px;
+   margin-inline-start: 2.5rem;
+
+}
+
+.content-header nav ol{
+   margin-block-end: 1.5rem;
+}
+
+/* wrapper */
+.wrapper{
+   margin-inline-start:17rem;
+   margin-inline-end: 10.5rem;
+   min-width: 720px;
+}
+
+.main-content h1 {
+   font-weight: bold;
+   margin-block-start: 4rem;
+   margin-bottom: 1rem;
+
+}
+
+/* Seccion de setup */
+
+.main-content p{
+   margin-block-start: 1rem;
+   margin-block-end: 2.5rem;
+}
+
+.main-content hr{
+   margin-block-start: 2.5rem;
+   margin-block-end: 2.5rem;
+}
+
+.main-content h2{
+   margin-block-start: 2.5rem;
+   margin-block-end: 2.5rem;
+}
+
+
+.main-content .h3-content{
+   margin-block-start: 1rem;
+   margin-block-end: 1rem;
+   padding: 0;
+}
+
+.h3-content h3{
+   margin: 0;
+}
+
+blockquote{
+   background-color: var(--gris10);
+   margin: 0;
+   margin-block-start: 5.25rem;
+   margin-block-end: 3.75rem;
+   padding-inline-start: 1.5rem;
+   padding-inline-end:1.1rem ;
+   padding-block: 1.5rem;
+   font-size: 1.5rem;
+   color: var(--blanco20);
+   line-height: 2rem;
+}
+
+blockquote p:last-of-type::before{
+   content: "-";
+   margin-inline-end: 3px;
+}
+
+.section-content + hr {
+   display: none;
+}
+
+.section-content .h3-content{
    counter-increment: titleList;
 }
 .section-content h3::before{
@@ -102,11 +209,153 @@ pre code {
    /* padding-right: 10px; */
 }
 
-.section-content h3::after{
+/* Seccion desarrollo web  */
+
+/*seccion de ejemplo de codigo */
+pre code {
+   display: block;
+   background-color:var(--gris10);
+   color:var(--blanco20);
+}
+pre{
+   /* padding: 2.5rem;
+   margin-inline-end: 3rem; */
+   min-width: 720px;
+   margin-block-end: 2.5rem;
+}
+
+.des-web p{
+   margin-block-end: 1rem;
+}
+.des-web img{
+   width: 90%;
+   margin-block: 0;
+   padding-block: 0;
+   display: block;
+
+}
+.des-web .h3-content{
+   margin-block-start:2.5rem ;
+   margin-inline-end: 1rem;
+   
+}
+
+
+/* .section-content h3::after{
    content: '';
    width: 32px;
    height: 4px;
    background-color: var(--gris20);
    display: block;
 
+} */
+
+
+/* Seccion modelo de caja */
+.modelo-caja h2{
+   margin-block-start: 7.6rem;
+}
+
+.modelo-caja .h3-content{
+   margin-block-start: 2.5rem;
+}
+
+
+.modelo-caja h3::before{
+
+   content: '' ;
+   /* padding-right: 10px; */
+}
+.modelo-caja ol, .modelo-caja ul{
+   padding-inline-start: 1rem;
+}
+.modelo-caja ul li{
+   margin-block-end: 1rem;
+   
+}
+.modelo-caja li{
+   font-size: 1.1rem;
+   line-height: 1.5rem;
+}
+
+.modelo-caja p:last-of-type{
+   margin-block-start: 3.2rem;
+}
+.modelo-caja p:last-of-type a{
+   color: rgb(43, 43, 248);
+   font-size: 17px;
+}
+
+.modelo-caja img{
+   max-width: 100%;
+}
+
+
+
+/* formulario */
+.formulario-contacto{
+   margin-block-end: 80px;
+}
+.formulario-contacto h3{
+   font-weight: 400;
+   font-size: 24px;
+
+}
+input{
+   box-sizing: border-box;
+   display: block;
+   width: 100%;
+   height: 1.3rem;
+   margin-block: 1rem;
+   background-color: transparent;
+   border: 1px var(--blanco20) solid;
+   border-radius: 8px;
+   padding-inline-start: 1rem;
+   padding-block: 1.1rem;
+   color: var(--blanco20);
+   font-size: 1rem;
+}
+input::placeholder{
+   color:var(--blanco20);
+   margin-inline-start: 1rem;
+   font-family: 'nunito',sans-serif;
+   font-size: 1rem;
+}
+
+.formulario-contacto button{
+   background-color:  #157EFB;
+   color:var(--blanco20);
+   font-weight: 700;
+   font-size: 1rem;
+   padding-block: 16px;
+   padding-inline: 1rem;
+   width: 100%;
+   border-radius: 8px;
+}
+
+/* footer */
+footer{
+   background-color: #FFFFFF;
+   border: 1px solid transparent;
+   align-items: center;
+}
+.content-footer{
+   text-align: center;
+}
+.content-footer p{
+   color: var(--gris10);
+   margin-block-start: 48px;
+   /* margin-inline-end: 45px; */
+   font-weight: 500;
+   font-size: 2rem;
+}
+.content-footer span{
+   display: block;
+   margin-block-start: 19px;
+}
+.content-footer img{
+   margin-inline-end:22px ;
+}
+img{
+   box-sizing: border-box;
 }
