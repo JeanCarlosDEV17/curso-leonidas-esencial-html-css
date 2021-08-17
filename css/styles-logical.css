@@ -29,7 +29,7 @@
 } */
 
 :root {
-   font-size: 16px;
+   font-size: 17px;
    --blanco20: #FFFFFF;
    --blanco10: #A5A3A5;
 
@@ -75,7 +75,9 @@ a {
 /* HEADER */
 header {
    font-size: 14px;
-   position: relative;
+   position: sticky;
+   top: 0;
+   /* position: relative; */
 }
 header a {
    color: var(--blanco10);
@@ -114,23 +116,39 @@ h4{
    color: var(--blanco20);
 }
 
+
+header .wrapper{
+   /* position: relative; */
+   /* 
+   
+   left: -100px; */
+   top:0;
+   border: 1px solid red;
+}
+
 .content-header{
    
-position: absolute;
-left: 20px;
-top:64px
-}
-.content-header nav{
-   /* position: absolute; */
+   position: relative;
    
-   position: sticky;
-   top: 0;
-   left: -100px;
-   width: 250px;
-   font-size: 14px;
-   margin-inline-start: 2.5rem;
+   top:0;
+   
+   border: 1px solid #26A0DA;
+
 
 }
+.content-header nav{
+   position: absolute;
+   left: -290px;
+   top:4rem;
+   max-inline-size: 240px;
+   height: 50px;
+   
+   font-size: 14px;
+   margin-inline-start: 2rem;
+   border: 1px solid yellow;
+}
+
+
 
 .content-header nav ol{
    margin-block-end: 1.5rem;
@@ -140,7 +158,8 @@ top:64px
 .wrapper{
    margin-inline-start:17rem;
    margin-inline-end: 10.5rem;
-   min-width: 720px;
+   /* min-width: 720px; */
+   min-inline-size: 720px;
 }
 
 .main-content h1 {
