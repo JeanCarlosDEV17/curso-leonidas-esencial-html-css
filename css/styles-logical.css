@@ -29,7 +29,7 @@
 } */
 
 :root {
-   font-size: 17px;
+   font-size: 16px;
    --blanco20: #FFFFFF;
    --blanco10: #A5A3A5;
 
@@ -53,6 +53,10 @@ body {
    /* font-family: charter,  sans-serif; */
    font-family: 'Nunito', "Roboto", sans-serif;
    background-color: #251F24;
+   font-size: 17px;
+   margin:0;
+   
+   /* overflow-x: scroll; */
    /* line-height: 24px; */
 }
 
@@ -63,11 +67,11 @@ a {
 /*div del patron de diseño del top de la pagina*/
 .hero {
    background:  linear-gradient(96deg, #314755 30%, #26A0DA 102%);
-  
-
    /* background: url('../images/patron-1.png') no-repeat top right ,  url('../images/figma.png') no-repeat top left #616161 ;
    background-size: contain,250px 100px; */
-   width: 100%;
+   /* width: 100%; */
+   inline-size: 100%;
+   max-inline-size:100%;
    height: 350px;
 }
 
@@ -77,12 +81,12 @@ header {
    font-size: 14px;
    position: sticky;
    top: 0;
-   /* position: relative; */
 }
 header a {
    color: var(--blanco10);
    font-weight: 400;
    text-decoration: none;
+   /* line-height: 24px; */
    line-height: 1.5rem;
 }
 header a:hover {
@@ -91,6 +95,7 @@ header a:hover {
 header summary {
    font-weight: 700;
    color: var(--blanco20);
+   /* line-height: 24px; */
    line-height: 1.5rem;
 }
 h1 {
@@ -103,10 +108,13 @@ h2 {
    color: var(--blanco20);
    font-size: 2.5em;
    font-weight: 600;
+   
 }
 h3 {
    color: var(--blanco20);
-   font-size: 2em;
+   /* font-size: 2em;
+   font-size: 32px; */
+   font-size: 2rem;
    font-weight: 600;
 }
 
@@ -116,38 +124,26 @@ h4{
    color: var(--blanco20);
 }
 
-
-header .wrapper{
-   /* position: relative; */
-   /* 
-   
-   left: -100px; */
-   top:0;
+/* header .wrapper{
    border: 1px solid red;
-}
+} */
 
 .content-header{
    
-   position: relative;
-   
-   top:0;
-   
-   border: 1px solid #26A0DA;
-
-
+   position: absolute;
+   left: 1px;
+   top:64px;
+   max-inline-size: 15vw;
+   min-inline-size: 8vw;
+   /* border: 1px solid yellow; */
+   block-size: 20rem;
 }
 .content-header nav{
-   position: absolute;
-   left: -290px;
-   top:4rem;
-   max-inline-size: 240px;
-   height: 50px;
-   
+   /* position: absolute; 
+   border: 1px solid #157EFB;*/
    font-size: 14px;
    margin-inline-start: 2rem;
-   border: 1px solid yellow;
 }
-
 
 
 .content-header nav ol{
@@ -156,40 +152,71 @@ header .wrapper{
 
 /* wrapper */
 .wrapper{
-   margin-inline-start:17rem;
+   margin-inline-start:20rem;
    margin-inline-end: 10.5rem;
    /* min-width: 720px; */
-   min-inline-size: 720px;
+   min-inline-size: 360px;
+   max-inline-size: 1170px;
+   /* inline-size: 100px; */
+   overflow: auto;
 }
 
 .main-content h1 {
    font-weight: bold;
+   /* margin-block-start: 64px; */
    margin-block-start: 4rem;
+   /* margin-bottom: 16px; */
    margin-bottom: 1rem;
 
+}
+
+.main-content img{
+   /* margin-block: 16px; */
+   margin-block:  1rem;
 }
 
 /* Seccion de setup */
 
 .main-content p{
+   /* margin-block-start: 16px;
+   margin-block-end: 2.5rem; */
+   /* margin-block: 1rem 2.5rem; */
    margin-block-start: 1rem;
    margin-block-end: 2.5rem;
 }
 
 .main-content hr{
+   /* margin-block-start: 40px; */
    margin-block-start: 2.5rem;
    margin-block-end: 2.5rem;
+   border: 1px solid rgba(97, 97, 97, 0.2);
+   /* margin-block-end: 40px; */
 }
 
 .main-content h2{
-   margin-block-start: 2.5rem;
-   margin-block-end: 2.5rem;
+   /* margin-block-start: 2.5rem;
+   margin-block-end: 2.5rem; */
+   /* margin-block:40px ; */
+   margin-block:2.5rem ;
+}
+
+.section-content img{
+   display: block;
+   margin-block: 1rem;
+
+   /* margin-block: 40px 16px; */
+   margin-block: 2.5rem 1rem;
 }
 
 
 .main-content .h3-content{
-   margin-block-start: 1rem;
-   margin-block-end: 1rem;
+
+   /* margin-block-start: 16px;
+   margin-block-end: 16px; */
+   /* margin-block-start: 1rem;
+   margin-block-end: 1rem; */
+   /* margin-block: 16px;  */
+   margin-block: 1rem; 
    padding: 0;
 }
 
@@ -200,13 +227,23 @@ header .wrapper{
 blockquote{
    background-color: var(--gris10);
    margin: 0;
-   margin-block-start: 5.25rem;
-   margin-block-end: 3.75rem;
-   padding-inline-start: 1.5rem;
-   padding-inline-end:1.1rem ;
+   border-radius: 8px;
+   /* margin-block-start: 5.25rem;
+   margin-block-end: 3.75rem; */
+   /* margin-block-end: 80px 63px;  */
+   margin-block-end: 5rem 3.93rem; 
+   /* padding-inline-start: 1.5rem;
+   padding-inline-end:1.1rem ; */
+
+   /* padding-inline: 24px 17px; */
+   padding-inline: 1.5rem 1.1rem;
+   /* padding-block: 24px; */
    padding-block: 1.5rem;
+
+   /* font-size: 24px; */
    font-size: 1.5rem;
    color: var(--blanco20);
+   /* line-height: 32px; */
    line-height: 2rem;
 }
 
@@ -228,35 +265,58 @@ blockquote p:last-of-type::before{
    /* padding-right: 10px; */
 }
 
-/* Seccion desarrollo web  */
+/* SECCION DESARROLLO WEB  */
+
+.des-web .h3-content{
+   /* margin-block:40px 16px ; */
+   margin-block:2.5rem 1rem;
+   
+}
+.des-web h3::before{
+
+   content: initial ;
+   /* padding-right: 10px; */
+}
+
+.des-web p{
+   /* margin-block: 16px; */
+   margin-block: 1rem;
+}
+
+
 
 /*seccion de ejemplo de codigo */
+
 pre code {
    display: block;
    background-color:var(--gris10);
    color:var(--blanco20);
 }
+
 pre{
    /* padding: 2.5rem;
    margin-inline-end: 3rem; */
-   min-width: 720px;
-   margin-block-end: 2.5rem;
+   /* min-width: 720px; */
+   /* min-inline-size: 720px; */
+
+   /* margin-block-end: 16px 40px; */
+   margin-block:1rem 2.5rem;
+   overflow: scroll;
+   white-space: pre-wrap;
 }
 
-.des-web p{
-   margin-block-end: 1rem;
-}
+
+
 .des-web img{
-   width: 90%;
-   margin-block: 0;
+   /* width: 98%; */
+   inline-size: 100%;
+   max-inline-size: 100%;
+   /* margin-block: 16px 40px; */
+   margin-block: 1rem 2.5rem;
+   margin-inline: auto;
    padding-block: 0;
    display: block;
 
-}
-.des-web .h3-content{
-   margin-block-start:2.5rem ;
-   margin-inline-end: 1rem;
-   
 }
 
 
@@ -270,15 +330,35 @@ pre{
 } */
 
 
-/* Seccion modelo de caja */
+/* SECCION DE MODELO DE CAJA */
 .modelo-caja h2{
-   margin-block-start: 7.6rem;
+   /* margin-block-start: 122px 40px; */
+   margin-block-start: 7.6rem 2.5rem;
+   
 }
 
 .modelo-caja .h3-content{
-   margin-block-start: 2.5rem;
+   /* margin-block: 40px 16px; */
+   margin-block: 2.5rem 1rem;
+
 }
 
+.modelo-caja p{
+
+   /* margin-block: 16px; */
+   margin-block: 1rem;
+}
+
+/* .modelo-caja{
+   border: 2px solid yellow;
+} */
+
+.modelo-caja .h3-content:first-of-type h3 , .modelo-caja .h3-content:nth-of-type(4)  h3{
+   /* font-size: 24px; */
+   font-size: 1.5rem;
+   font-weight: 400;
+   /* border: 2px solid red; */
+}
 
 .modelo-caja h3::before{
 
@@ -286,19 +366,29 @@ pre{
    /* padding-right: 10px; */
 }
 .modelo-caja ol, .modelo-caja ul{
-   padding-inline-start: 1rem;
+   padding-inline-start: 0;   
 }
 .modelo-caja ul li{
+   /* margin-block-end: 16px; */
    margin-block-end: 1rem;
    
 }
+
 .modelo-caja li{
+   /* font-size: 17px; */
    font-size: 1.1rem;
+   /* line-height: 24px; */
    line-height: 1.5rem;
+   margin-inline-start: 19px;
+   margin-inline-start: 1.2rem;
+   
 }
 
 .modelo-caja p:last-of-type{
-   margin-block-start: 3.2rem;
+   /* margin-block: 51px  40px; */
+   margin-block: 3.2rem 2.5rem;
+   /* border: 2px solid yellow;  */
+
 }
 .modelo-caja p:last-of-type a{
    color: rgb(43, 43, 248);
@@ -306,26 +396,43 @@ pre{
 }
 
 .modelo-caja img{
-   max-width: 100%;
+   /* max-width: 100%; */
+   max-inline-size: 100%;
 }
 
+.modelo-caja h3::before{
 
+   content: initial ;
+   /* padding-right: 10px; */
+}
 
-/* formulario */
+/* FORMULARIO  */
 .formulario-contacto{
+   /* margin-block-end: 5rem; */
    margin-block-end: 80px;
 }
 .formulario-contacto h3{
    font-weight: 400;
+   /* font-size: 1.5rem; */
    font-size: 24px;
 
+   line-height: 32px;
+
+   block-size: 40px 16px;
+
 }
+
+
+
+
 input{
    box-sizing: border-box;
    display: block;
-   width: 100%;
-   height: 1.3rem;
-   margin-block: 1rem;
+   /* width: 100%; */
+   inline-size: 100%;
+   /* height: 1.3rem; */
+   block-size: 1.3rem;
+   margin-block: 1rem 1.5rem;
    background-color: transparent;
    border: 1px var(--blanco20) solid;
    border-radius: 8px;
@@ -339,6 +446,8 @@ input::placeholder{
    margin-inline-start: 1rem;
    font-family: 'nunito',sans-serif;
    font-size: 1rem;
+   font-weight: 400;
+   line-height: 24px;
 }
 
 .formulario-contacto button{
@@ -348,7 +457,8 @@ input::placeholder{
    font-size: 1rem;
    padding-block: 16px;
    padding-inline: 1rem;
-   width: 100%;
+   /* width: 100%; */
+   inline-size: 100%;
    border-radius: 8px;
 }
 
@@ -372,7 +482,10 @@ footer{
    display: block;
    margin-block-start: 19px;
 }
-.content-footer img{
+.modelo-caja-img {
+   margin-inline: auto;
+   /* width: 100%; */
+   inline-size: 100%;
    margin-inline-end:22px ;
 }
 img{
