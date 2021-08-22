@@ -38,6 +38,11 @@
    /* es importante que por cada color identifiquemos cada una de las 
       tonalidades usadas de ese color par formar una escala  */
 }
+
+* {
+   /* border: 3px solid red !important; */
+}
+
 .debug {
    box-shadow: inset 0 0 0 3px red;
    outline: 3px solid red;
@@ -46,7 +51,9 @@
 }
 html {
    background-color: #ffffff;
+   /* background-color: #251f24; */
    scroll-behavior: smooth;
+   min-inline-size: 200px;
 }
 body {
    color: var(--blanco10);
@@ -55,7 +62,8 @@ body {
    background-color: #251f24;
    font-size: 17px;
    margin: 0;
-
+   /* min-inline-size: 360px; */
+   inline-size: 100%;
    /* overflow-x: scroll; */
    /* line-height: 24px; */
 }
@@ -151,13 +159,15 @@ h4 {
 
 /* wrapper */
 .wrapper {
-   margin-inline-start: 20rem;
-   margin-inline-end: 10.5rem;
+   margin-inline: auto;
+   margin-inline-start: 13rem;
+   /* margin-inline-end: 10.5rem; */
+
    /* min-width: 720px; */
-   min-inline-size: 360px;
-   max-inline-size: 1170px;
+   /* min-inline-size: 360px; */
+   max-inline-size: 902px;
    /* inline-size: 100px; */
-   overflow: auto;
+   /* overflow: auto; */
 }
 
 .main-content {
@@ -425,7 +435,7 @@ pre {
 
 
 } */
-.slider-bullet-list{
+.slider-bullet-list {
    padding-block-start: 10px;
    text-align: center;
 }
@@ -438,9 +448,8 @@ pre {
    /* border: 1px solid blue; */
 }
 
-.slider-slide figure img{
+.slider-slide figure img {
    margin-inline: auto;
-
 }
 
 .slider-bullet {
@@ -454,10 +463,6 @@ pre {
    text-decoration: none;
    background-color: #ffffff;
 }
-
-
-
-
 
 /* FORMULARIO  */
 .formulario-contacto {
@@ -544,4 +549,83 @@ input::placeholder {
 }
 img {
    box-sizing: border-box;
+}
+
+@media screen and (max-width: 500px) {
+   .header {
+      font-size: 14px;
+      position: static;
+   }
+   .content-header {
+      position: static;
+
+      max-inline-size: 200px;
+      min-inline-size: 8vw;
+      border: 1px solid yellow;
+      block-size: auto;
+      min-block-size: 8rem;
+      margin-left: 5px;
+      padding: 10px;
+   }
+   .content-header nav {
+      /* positio: absolute; 
+   border: 1px solid #157EFB;*/
+      font-size: 14px;
+      margin-inline-start: 0rem;
+   }
+
+   .content-header nav ol {
+      margin-block-end: 1.5rem;
+   }
+
+   /* wrapper */
+   .wrapper {
+      margin-inline: auto;
+
+      /* margin-inline-end: 10.5rem; */
+
+      /* min-width: 720px; */
+      /* min-inline-size: 360px; */
+      max-inline-size: 902px;
+      /* inline-size: 100px; */
+      /* overflow: auto; */
+   }
+
+   pre code {
+      display: block;
+      background-color: var(--gris10);
+      color: var(--blanco20);
+   }
+
+   pre {
+      margin-block: 1rem 2.5rem;
+
+      /* padding: 40px; */
+      padding: 0rem;
+      overflow: hidden;
+   }
+   code {
+      padding: 8px;
+      white-space: pre;
+      /* border: 1px solid yellow; */
+      overflow: scroll;
+   }
+
+   /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+   code::-webkit-scrollbar {
+      background: white;
+      block-size: 10px;
+      border-radius: 4px;
+   }
+   code::-webkit-scrollbar-thumb{
+      background: var(--gris20);
+      block-size: 5px;
+      border-radius: 4px;
+   }
+
+   /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+   
+
+   /* Cambiamos el fondo cuando esté en active */
+   
 }
