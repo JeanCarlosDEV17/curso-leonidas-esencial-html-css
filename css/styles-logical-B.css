@@ -1,0 +1,770 @@
+@font-face {
+   font-family: charter;
+   src: url("../fonts/charter-regular.otf");
+   font-style: normal;
+   font-weight: 400;
+}
+@font-face {
+   font-family: charter;
+   src: url("../fonts/charter-italic.otf");
+   font-style: italic;
+   font-weight: 400;
+}
+@font-face {
+   font-family: charter;
+   src: url("../fonts/charter-bold.otf");
+   font-style: normal;
+   font-weight: bold;
+}
+@font-face {
+   font-family: charter;
+   src: url("../fonts/charter-bold-italic.otf");
+   font-style: italic;
+   font-weight: bold;
+}
+/* *  {
+   font-family: roboto, sans-serif;
+   
+   
+} */
+
+:root {
+   font-size: 16px;
+   --blanco20: #ffffff;
+   --blanco10: #a5a3a5;
+
+   --gris20: #212429;
+   --gris10: #3a3539;
+   /* es importante que por cada color identifiquemos cada una de las 
+      tonalidades usadas de ese color par formar una escala  */
+}
+
+/*  * {
+   border: 3px solid red !important;
+} */
+
+.debug {
+   box-shadow: inset 0 0 0 3px red;
+   outline: 3px solid red;
+   background-color: red;
+   border: 3px solid red !important;
+}
+html {
+   background-color: #ffffff;
+   /* background-color: #251f24; */
+   scroll-behavior: smooth;
+   min-inline-size: 230px;
+   inline-size: auto;
+}
+body {
+   color: var(--blanco10);
+   /* font-family: charter,  sans-serif; */
+   font-family: "Nunito", "Roboto", sans-serif;
+   background-color: #251f24;
+   font-size: 17px;
+   margin: 0;
+   /* min-inline-size: 360px; */
+   inline-size: 100%;
+   /* overflow-x: scroll; */
+   /* line-height: 24px; */
+}
+
+a {
+   color: var(--blanco10);
+}
+
+/*div del patron de diseño del top de la pagina*/
+.hero {
+   background: linear-gradient(96deg, #314755 30%, #26a0da 102%);
+   /* background: url('../images/patron-1.png') no-repeat top right ,  url('../images/figma.png') no-repeat top left #616161 ;
+   background-size: contain,250px 100px; */
+   /* width: 100%; */
+   inline-size: 100%;
+   max-inline-size: 100%;
+   block-size: 100px;
+}
+
+/* HEADER */
+.header {
+   font-size: 14px;
+   position: static;
+}
+header a {
+   color: var(--blanco10);
+   font-weight: 400;
+   text-decoration: none;
+   /* line-height: 24px; */
+   line-height: 1.5rem;
+}
+header a:hover {
+   color: var(--blanco20);
+}
+header summary {
+   font-weight: 700;
+   color: var(--blanco20);
+   /* line-height: 24px; */
+   line-height: 1.5rem;
+}
+h1 {
+   color: var(--blanco20);
+   font-weight: 400;
+   font-size: 1.5rem;
+}
+h2 {
+   color: var(--blanco20);
+   font-size: 1.5em;
+   font-weight: 400;
+}
+h3 {
+   color: var(--blanco20);
+   font-size: 1.25rem;
+   font-weight: 400;
+}
+
+h4 {
+   font-weight: 700;
+   font-size: 0.9rem;
+   color: var(--blanco20);
+}
+
+/* header .wrapper{
+   border: 1px solid red;
+} */
+
+.content-header {
+   position: static;
+   max-inline-size: 200px;
+   /* min-inline-size: 8vw; */
+   min-inline-size: 140px;
+   /* border: 1px solid green; */
+   block-size: auto;
+   min-block-size: 130px;
+   margin-inline: 20px;
+   margin-block: 16px;
+   padding: 8px;
+}
+.content-header nav {
+   /* positio: absolute; 
+   border: 1px solid #157EFB;*/
+   font-size: 14px;
+   margin-inline-start: 0rem;
+}
+.content-header nav summary {
+   margin-block-end: 1rem;
+}
+.content-header nav ol {
+   margin-block-end: 1.5rem;
+}
+
+/* wrapper */
+.wrapper {
+   margin-inline: auto;
+   /* margin-inline-start: 1rem; */
+   /* margin-inline-end: 10.5rem; */
+
+   /* min-width: 720px; */
+   /* min-inline-size: 360px; */
+   max-inline-size: 420px;
+   /* inline-size: 100px; */
+   /* overflow: auto; */
+}
+
+.main-content {
+   padding-inline: 1rem;
+}
+.main-content h1 {
+   font-weight: 400;
+   /* margin-block-start: 64px; */
+   margin-block-start: 3rem;
+   /* margin-bottom: 16px; */
+   margin-bottom: 1rem;
+}
+
+.main-content img {
+   /* margin-block: 16px; */
+   margin-block: 1rem;
+}
+
+/* Seccion de setup */
+
+.main-content p {
+   /* margin-block-start: 16px;
+   margin-block-end: 2.5rem; */
+   /* margin-block: 1rem 2.5rem; */
+   margin-block-start: 1rem;
+   margin-block-end: 2.5rem;
+   /* max-inline-size: 90%; */
+   /* word-wrap: break-word; */
+}
+
+.main-content hr {
+   /* margin-block-start: 40px; */
+   margin-block-start: 2.5rem;
+   margin-block-end: 2.5rem;
+   border: 1px solid rgba(97, 97, 97, 0.2);
+   /* margin-block-end: 40px; */
+}
+
+.main-content h2 {
+   /* margin-block-start: 2.5rem;
+   margin-block-end: 2.5rem; */
+   /* margin-block:40px ; */
+   margin-block: 2.5rem 1.5rem;
+}
+
+.section-content img {
+   display: block;
+   margin-block: 1rem;
+
+   /* margin-block: 40px 16px; */
+   margin-block: 2.5rem 1rem;
+}
+
+.main-content .h3-content {
+   /* margin-block-start: 16px;
+   margin-block-end: 16px; */
+   /* margin-block-start: 1rem;
+   margin-block-end: 1rem; */
+   /* margin-block: 16px;  */
+   margin-block: 1rem;
+   padding: 0;
+}
+
+.h3-content h3 {
+   margin: 0;
+}
+
+blockquote {
+   background-color: var(--gris10);
+   margin: 0;
+   border-radius: 8px;
+   /* margin-block-start: 5.25rem;
+   margin-block-end: 3.75rem; */
+   /* margin-block: 80px 63px;  */
+   margin-block: 2.5rem;
+   /* padding-inline-start: 1.5rem;
+   padding-inline-end:1.1rem ; */
+
+   /* padding-inline: 24px; */
+   /* padding-inline: 1.5rem; */
+   /* padding-block: 24px; */
+   /* padding-block: 1.5rem; */
+   padding: 0.5rem;
+   /* font-size: 24px; */
+   font-size: 17px;
+   font-weight: 700;
+   color: var(--blanco20);
+   /* line-height: 32px; */
+   line-height: 2rem;
+}
+
+blockquote p:last-of-type::before {
+   content: "-";
+   margin-inline-end: 3px;
+}
+
+.section-content + hr {
+   display: none;
+}
+
+.section-content .h3-content {
+   counter-increment: titleList;
+}
+.section-content h3::before {
+   content: counter(titleList) ". ";
+   /* padding-right: 10px; */
+}
+
+/* SECCION DESARROLLO WEB  */
+
+.des-web .h3-content {
+   /* margin-block:40px 16px ; */
+   margin-block: 1.5rem 1rem;
+}
+.des-web h3::before {
+   content: initial;
+   /* padding-right: 10px; */
+}
+
+.des-web p {
+   /* margin-block: 16px; */
+   margin-block: 1rem;
+}
+
+/*seccion de ejemplo de codigo */
+
+pre code {
+   display: block;
+   background-color: var(--gris10);
+   color: var(--blanco20);
+}
+
+pre {
+   /* inline-size: 100%; */
+   /* margin-block-end: 16px 40px; */
+   margin-block: 1rem 1.5rem;
+   overflow: auto;
+   white-space: pre-wrap;
+
+   /* padding: 40px; */
+}
+
+code {
+   padding: 16px;
+   /* margin: 1rem; */
+   white-space: pre;
+   /* border: 1px solid yellow; */
+   overflow: scroll;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+code::-webkit-scrollbar {
+   background: white;
+   block-size: 10px;
+   border-radius: 4px;
+}
+code::-webkit-scrollbar-thumb {
+   background: var(--gris20);
+   block-size: 5px;
+   border-radius: 4px;
+}
+
+.des-web img {
+   /* width: 98%; */
+   inline-size: 100%;
+   max-inline-size: 100%;
+   /* margin-block: 16px 40px; */
+   margin-block: 1rem 1.5rem;
+   margin-inline: auto;
+   padding-block: 0;
+   display: block;
+}
+
+/* .section-content h3::after{
+   content: '';
+   width: 32px;
+   height: 4px;
+   background-color: var(--gris20);
+   display: block;
+
+} */
+
+/* SECCION DE MODELO DE CAJA */
+.modelo-caja h2 {
+   /* margin-block-start: 122px 40px; */
+   margin-block-start: 2.5rem 1.5rem;
+}
+
+.modelo-caja .h3-content {
+   /* margin-block: 40px 16px; */
+   margin-block: 1.5rem 1rem;
+}
+
+.modelo-caja p {
+   /* margin-block: 16px; */
+   margin-block: 1rem;
+}
+
+/* .modelo-caja{
+   border: 2px solid yellow;
+} */
+
+.modelo-caja .h3-content:first-of-type h3,
+.modelo-caja .h3-content:nth-of-type(4) h3 {
+   /* font-size: 24px; */
+   font-size: 1.5rem;
+   font-weight: 700;
+   /* border: 2px solid red; */
+}
+
+.modelo-caja h3::before {
+   content: "";
+   /* padding-right: 10px; */
+}
+.modelo-caja ol,
+.modelo-caja ul {
+   padding-inline-start: 0;
+}
+.modelo-caja ul li {
+   /* margin-block-end: 16px; */
+   margin-block-end: 1rem;
+}
+
+.modelo-caja li {
+   /* font-size: 17px; */
+   font-size: 1.1rem;
+   /* line-height: 24px; */
+   line-height: 1.5rem;
+   margin-inline-start: 19px;
+   margin-inline-start: 1.2rem;
+}
+
+.modelo-caja p:last-of-type {
+   /* margin-block: 51px  40px; */
+   margin-block: 2.5rem;
+   /* border: 2px solid yellow;  */
+}
+.modelo-caja p:last-of-type a {
+   color: rgb(43, 43, 248);
+   font-size: 17px;
+}
+
+.modelo-caja img {
+   /* max-width: 100%; */
+   max-inline-size: 100%;
+}
+
+.modelo-caja h3::before {
+   content: initial;
+   /* padding-right: 10px; */
+}
+
+/* SLIDER */
+
+.slider {
+   /* border: 1px solid red; */
+   padding: 10px;
+   block-size: auto;
+   min-block-size: 100px;
+}
+
+.slider-container {
+   min-block-size: 100px;
+   /* inline-size:100%; */
+   display: block;
+   overflow: auto;
+   scroll-behavior: smooth;
+   white-space: nowrap;
+   /* border: 1px solid yellow; */
+
+   /* box-sizing: border-box; */
+}
+
+/* .slider-slide{
+    display: inline-block;
+    margin: 0;
+    
+
+
+   box-sizing: border-box;
+   inline-size:100%;
+   block-size: 105%;
+  
+   border: 1px solid blue;
+   align-items: center;
+
+
+} */
+.slider-bullet-list {
+   padding-block-start: 10px;
+   text-align: center;
+}
+.slider-slide figure {
+   margin: 0;
+   display: inline-block;
+   inline-size: 100%;
+
+   text-align: center;
+   /* border: 1px solid blue; */
+}
+figure figcaption {
+   white-space: pre-wrap;
+   margin-block-end: 5px;
+}
+.slider-slide figure img {
+   margin-inline: auto;
+}
+
+.slider-bullet {
+   margin-inline-end: 5px;
+   inline-size: 20px;
+   block-size: 20px;
+   display: inline-block;
+   border: solid black 2px;
+   border-radius: 50%;
+   text-align: center;
+   text-decoration: none;
+   background-color: #ffffff;
+}
+
+/* FORMULARIO  */
+/* .formulario-contacto {
+    margin-block-end: 5rem; 
+    margin-block-end: 80px; 
+} */
+.formulario-contacto h3 {
+   font-weight: 400;
+   /* font-size: 1.5rem; */
+   font-size: 24px;
+
+   line-height: 32px;
+
+   block-size: 40px 16px;
+}
+
+input {
+   box-sizing: border-box;
+   display: block;
+   /* width: 100%; */
+   inline-size: 100%;
+   /* height: 1.3rem; */
+   block-size: 3rem;
+   margin-block: 1rem 1.5rem;
+   background-color: transparent;
+   border: 1px var(--blanco20) solid;
+   border-radius: 8px;
+   padding-inline-start: 1rem;
+   padding-block: 0.4rem;
+   color: var(--blanco20);
+   font-size: 1rem;
+}
+input::placeholder {
+   color: var(--blanco20);
+   margin-inline-start: 1rem;
+   font-family: "nunito", sans-serif;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 24px;
+}
+
+.formulario-contacto button {
+   background-color: #157efb;
+   color: var(--blanco20);
+   font-weight: 700;
+   font-size: 1rem;
+   padding-block: 16px;
+   padding-inline: 1rem;
+   /* width: 100%; */
+   inline-size: 100%;
+   border-radius: 8px;
+   margin-block: 1.5rem 2.5rem;
+}
+
+.formulario-contacto h3::before {
+   counter-reset: none;
+   content: none;
+}
+
+/* footer */
+.footer {
+   background-color: #ffffff;
+   border: 1px solid transparent;
+   align-items: center;
+}
+.content-footer {
+   text-align: center;
+}
+.content-footer p {
+   color: var(--gris10);
+   margin-block-start: 48px;
+   /* margin-inline-end: 45px; */
+   font-weight: 500;
+   font-size: 2rem;
+}
+.content-footer span {
+   display: block;
+   margin-block-start: 19px;
+}
+.modelo-caja-img {
+   margin-inline: auto;
+   /* width: 100%; */
+   inline-size: 100%;
+   margin-inline-end: 22px;
+}
+img {
+   box-sizing: border-box;
+}
+
+@media screen and (max-width: 200px) {
+   .content-header {
+      min-inline-size: initial;
+      /* max-inline-size: 180px; */
+   }
+   .main-content p {
+      word-break: break-all;
+      /* word-wrap: break-word; */
+   }
+}
+@media screen and (min-width: 300px) {
+   .main-content p {
+      word-break: initial;
+   }
+}
+
+@media screen and (min-width: 500px) {
+   .hero {
+      background: linear-gradient(96deg, #314755 30%, #26a0da 102%);
+      /* background: url('../images/patron-1.png') no-repeat top right ,  url('../images/figma.png') no-repeat top left #616161 ;
+   background-size: contain,250px 100px; */
+      /* width: 100%; */
+      inline-size: 100%;
+      max-inline-size: 100%;
+      block-size: 200px;
+   }
+   .header {
+      position: sticky;
+      /* top: 0; */
+      inset-block-start: -30px;
+      /* display: inline-block; */
+      /* border: #157efb solid 2px; */
+      block-size: 0;
+   }
+
+   h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+   }
+   h2 {
+      color: var(--blanco20);
+      font-size: 2.5em;
+      font-weight: 600;
+   }
+   h3 {
+      font-size: 2rem;
+      font-weight: 600;
+   }
+
+   .content-header {
+      position: absolute;
+      inset-inline-start: 1px;
+      inset-block-start: 40px;
+
+      font-size: 14px;
+      max-inline-size: 150px;
+      inline-size: auto;
+      /* border: 1px solid yellow; */
+      block-size: auto;
+   }
+
+   /* WRAPPER */
+   .wrapper {
+      margin-inline: auto;
+      /* TODO: PANTALLAS DE MAS DE 7OOPX 19REM */
+      /* margin-inline-start: 19rem; */
+      margin-inline-start: 10rem;
+      /* margin-inline-end: 10.5rem; */
+
+      /* min-width: 720px; */
+      /* min-inline-size: 360px; */
+      max-inline-size: 500px;
+      /* inline-size: 100px; */
+      /* overflow: auto; */
+      padding-inline: 1rem;
+   }
+
+   .main-content h1 {
+      font-weight: 700;
+      /* font-size: 1.5rem; */
+      margin-block-start: 4rem;
+      margin-bottom: 1rem;
+   }
+
+   .main-content h2 {
+      /* margin-block-start: 2.5rem;
+   margin-block-end: 2.5rem; */
+      /* margin-block:40px ; */
+      margin-block: 2.5rem;
+   }
+
+   pre code {
+      display: block;
+      background-color: var(--gris10);
+      color: var(--blanco20);
+   }
+
+   blockquote {
+      margin-block: 5rem 4rem;
+      padding-inline: 1.5rem;
+      padding-block: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--blanco20);
+      line-height: 2rem;
+   }
+
+   /* SECCION DESARROLLO WEB  */
+
+   .des-web .h3-content {
+      margin-block: 2.5rem 1rem;
+   }
+   pre {
+      margin-block: 1rem 2.5rem;
+      /* TODO: revisar para 700px */
+   }
+   code {
+      white-space: pre;
+      /* margin: 2rem; */
+      /* border: 1px solid yellow; */
+      overflow: scroll;
+      padding: 24px;
+   }
+
+   /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+   code::-webkit-scrollbar {
+      background: white;
+      block-size: 10px;
+      border-radius: 4px;
+   }
+   code::-webkit-scrollbar-thumb {
+      background: var(--gris20);
+      block-size: 5px;
+      border-radius: 4px;
+   }
+   .des-web img {
+      margin-block: 1rem 2.5rem;
+   }
+
+   /* SECCION DE MODELO DE CAJA */
+
+   .modelo-caja h2 {
+      margin-block-start: 7.6rem 2.5rem;
+   }
+   .modelo-caja .h3-content {
+      margin-block: 2.5rem 1rem;
+   }
+   .modelo-caja .h3-content:first-of-type h3,
+   .modelo-caja .h3-content:nth-of-type(4) h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      /* border: 2px solid red; */
+   }
+
+   .modelo-caja p:last-of-type {
+      margin-block: 3.2rem 2.5rem;
+      /* border: 2px solid yellow;  */
+   }
+
+   .formulario-contacto button {
+      margin-block: 2rem 5rem;
+   }
+}
+
+@media screen and (min-width: 700px) {
+   .content-header {
+      max-inline-size: 200px;
+      /* min-inline-size: 160px; */
+      /* border: 1px solid blue; */
+   }
+   .main-content h1 {
+      font-size: 4rem;
+   }
+   .wrapper {
+      margin-inline: auto;
+      margin-inline-start: 15rem;
+      max-inline-size: 900px;
+   }
+}
+
+@media screen and (min-width: 900px) {
+   .content-header {
+      max-inline-size: 270px;
+
+      /* border: 1px solid red; */
+   }
+
+   .wrapper {
+      margin-inline: auto;
+      margin-inline-start: 18rem;
+      max-inline-size: 900px;
+   }
+}
