@@ -81,7 +81,7 @@ a {
    /* width: 100%; */
    inline-size: 100%;
    max-inline-size: 100%;
-   block-size: 50px;
+   block-size: 100px;
 }
 
 /* HEADER */
@@ -149,7 +149,9 @@ h4 {
    font-size: 14px;
    margin-inline-start: 0rem;
 }
-
+.content-header nav summary {
+   margin-block-end: 1rem;
+}
 .content-header nav ol {
    margin-block-end: 1.5rem;
 }
@@ -465,7 +467,7 @@ code::-webkit-scrollbar-thumb {
    text-align: center;
    /* border: 1px solid blue; */
 }
-figure figcaption{
+figure figcaption {
    white-space: pre-wrap;
    margin-block-end: 5px;
 }
@@ -574,20 +576,16 @@ img {
 }
 
 @media screen and (max-width: 200px) {
-   
-
-   
    .content-header {
       min-inline-size: initial;
       /* max-inline-size: 180px; */
    }
    .main-content p {
-      
       word-break: break-all;
       /* word-wrap: break-word; */
    }
 }
-@media screen and (min-width:300px) {
+@media screen and (min-width: 300px) {
    .main-content p {
       word-break: initial;
    }
@@ -604,16 +602,13 @@ img {
       block-size: 200px;
    }
    .header {
-      
       position: sticky;
       /* top: 0; */
       inset-block-start: -30px;
       /* display: inline-block; */
       /* border: #157efb solid 2px; */
       block-size: 0;
-
    }
-   
 
    h1 {
       font-size: 2.5rem;
@@ -750,7 +745,7 @@ img {
       /* min-inline-size: 160px; */
       /* border: 1px solid blue; */
    }
-   .main-content h1{
+   .main-content h1 {
       font-size: 4rem;
    }
    .wrapper {
