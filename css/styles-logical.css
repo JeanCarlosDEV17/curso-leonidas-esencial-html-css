@@ -423,10 +423,12 @@ code::-webkit-scrollbar-thumb {
 .slider {
    /* border: 1px solid red; */
    padding: 10px;
+   block-size: auto;
+   min-block-size: 100px;
 }
 
 .slider-container {
-   block-size: 100px;
+   min-block-size: 100px;
    /* inline-size:100%; */
    display: block;
    overflow: auto;
