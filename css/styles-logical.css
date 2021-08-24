@@ -637,7 +637,7 @@ img {
       font-size: 14px;
       max-inline-size: 150px;
       inline-size: auto;
-      border: 1px solid yellow;
+      /* border: 1px solid yellow; */
       block-size: auto;
    }
 
