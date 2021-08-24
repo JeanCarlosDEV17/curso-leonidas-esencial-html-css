@@ -465,7 +465,10 @@ code::-webkit-scrollbar-thumb {
    text-align: center;
    /* border: 1px solid blue; */
 }
-
+figure figcaption{
+   white-space: pre-wrap;
+   margin-block-end: 5px;
+}
 .slider-slide figure img {
    margin-inline: auto;
 }
@@ -601,14 +604,19 @@ img {
       block-size: 200px;
    }
    .header {
-      font-size: 14px;
+      
       position: sticky;
       /* top: 0; */
       inset-block-start: -30px;
+      /* display: inline-block; */
+      /* border: #157efb solid 2px; */
+      block-size: 0;
+
    }
+   
 
    h1 {
-      font-size: 4rem;
+      font-size: 2.5rem;
       font-weight: 600;
    }
    h2 {
@@ -624,11 +632,12 @@ img {
    .content-header {
       position: absolute;
       inset-inline-start: 1px;
-      inset-block-start: 5px;
+      inset-block-start: 40px;
 
+      font-size: 14px;
       max-inline-size: 150px;
       inline-size: auto;
-      /* border: 1px solid yellow; */
+      border: 1px solid yellow;
       block-size: auto;
    }
 
@@ -645,7 +654,7 @@ img {
       max-inline-size: 500px;
       /* inline-size: 100px; */
       /* overflow: auto; */
-      padding: 1rem;
+      padding-inline: 1rem;
    }
 
    .main-content h1 {
@@ -741,7 +750,9 @@ img {
       /* min-inline-size: 160px; */
       /* border: 1px solid blue; */
    }
-
+   .main-content h1{
+      font-size: 4rem;
+   }
    .wrapper {
       margin-inline: auto;
       margin-inline-start: 15rem;
