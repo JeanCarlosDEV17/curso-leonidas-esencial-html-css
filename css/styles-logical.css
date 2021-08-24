@@ -39,9 +39,9 @@
       tonalidades usadas de ese color par formar una escala  */
 }
 
-* {
-   /* border: 3px solid red !important; */
-}
+/*  * {
+   border: 3px solid red !important;
+} */
 
 .debug {
    box-shadow: inset 0 0 0 3px red;
@@ -162,7 +162,7 @@ h4 {
 
    /* min-width: 720px; */
    /* min-inline-size: 360px; */
-   max-inline-size: 320px;
+   max-inline-size: 420px;
    /* inline-size: 100px; */
    /* overflow: auto; */
 }
@@ -191,6 +191,9 @@ h4 {
    /* margin-block: 1rem 2.5rem; */
    margin-block-start: 1rem;
    margin-block-end: 2.5rem;
+   max-inline-size: 90%;
+   /* word-wrap: break-word; */
+   
 }
 
 .main-content hr {
@@ -479,10 +482,10 @@ code::-webkit-scrollbar-thumb {
 }
 
 /* FORMULARIO  */
-.formulario-contacto {
-   /* margin-block-end: 5rem; */
-   /* margin-block-end: 80px; */
-}
+/* .formulario-contacto {
+    margin-block-end: 5rem; 
+    margin-block-end: 80px; 
+} */
 .formulario-contacto h3 {
    font-weight: 400;
    /* font-size: 1.5rem; */
@@ -566,6 +569,35 @@ img {
    box-sizing: border-box;
 }
 
+
+@media screen and (max-width: 200px) {
+  
+   *{
+      margin-inline: 0 !important;
+      padding-inline: 1px !important;
+   }
+
+   html{
+      /* min-inline-size: 200px; */
+   }
+   .content-header{
+      min-inline-size: initial;
+      /* max-inline-size: 180px; */
+   }
+   .main-content p {
+   /* margin-block-start: 16px;
+   margin-block-end: 2.5rem; */
+   /* margin-block: 1rem 2.5rem; */
+   
+   max-inline-size: 90%;
+   word-break: break-all;
+   /* word-wrap: break-word; */
+   
+}
+   
+}
+
+
 @media screen and (min-width: 500px) {
    .hero {
       background: linear-gradient(96deg, #314755 30%, #26a0da 102%);
@@ -613,7 +645,7 @@ img {
       margin-inline: auto;
       /* TODO: PANTALLAS DE MAS DE 7OOPX 19REM */
       /* margin-inline-start: 19rem; */
-      margin-inline-start: 8.5rem;
+      margin-inline-start: 10rem;
       /* margin-inline-end: 10.5rem; */
 
       /* min-width: 720px; */
