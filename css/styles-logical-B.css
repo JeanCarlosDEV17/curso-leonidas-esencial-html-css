@@ -634,7 +634,8 @@ img {
       /* max-inline-size: 180px; */
    }
    .main-content p {
-      word-break: break-all;
+      word-break: break-word;;
+
       /* word-wrap: break-word; */
    }
 }
@@ -659,9 +660,9 @@ img {
       /* top: 0; */
       inset-block-start: -30px;
       /* display: inline-block; */
-      border: #157efb solid 2px;
+      /* border: #157efb solid 2px; */
       float: left;
-      block-size: 79vh;
+      block-size: 75vh;
       max-inline-size: 195px;
       overflow-y: auto;
       direction: rtl
