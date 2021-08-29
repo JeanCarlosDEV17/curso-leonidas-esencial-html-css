@@ -306,7 +306,7 @@ blockquote {
    padding-inline: 0.5rem;
    padding-block: 0.5rem;
    border-radius: 8px;
-   font-size: 17px;
+   font-size: 16px;
    font-weight: 700;
 }
 .section-content blockquote p {
@@ -623,6 +623,7 @@ input::placeholder {
 .content-footer span {
    display: block;
    margin-block-start: 19px;
+   margin-inline: 22px;
 }
 .modelo-caja-img {
    margin-inline: auto;
@@ -762,6 +763,9 @@ img {
       color: var(--blanco20);
       line-height: 2rem;
    }
+   .section-content blockquote p:last-of-type {
+      margin-block-start:16px ;
+   }
 
    /* SECCION DESARROLLO WEB  */
 
@@ -840,6 +844,12 @@ img {
 }
 
 @media screen and (min-width: 900px) {
+   .hero{
+      block-size: 200px;
+   }
+   .header {
+      max-inline-size: 300px;
+   }
    .content-header {
       max-inline-size: 270px;
 
@@ -851,4 +861,10 @@ img {
       margin-inline-start: 18rem;
       max-inline-size: 900px;
    }
+}
+
+@media screen and (min-width:1200px){
+   .footer{
+      margin-block-start:100px ;
+   }   
 }

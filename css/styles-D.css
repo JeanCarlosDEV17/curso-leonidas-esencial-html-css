@@ -1,0 +1,383 @@
+.hero {
+   /* background: linear-gradient(96deg, #314755 30%, #26a0da 102%); */
+   /* background: url('../images/patron-1.png') no-repeat top right ,  url('../images/figma.png') no-repeat top left #616161 ;
+   background-size: contain,250px 100px; */
+   /* width: 100%; */ 
+   background: linear-gradient(274deg, #4A00E099 5%, #8E2DE280 130%), url("../images/patron-2.png");
+   inline-size: 100%;
+   max-inline-size: 100%;
+   block-size: 101px;
+   
+}
+.content-header{
+   max-inline-size: revert;
+}
+
+
+.nav-pages-content li{
+   font-weight: 500;
+}
+
+.nav-pages-content h4{
+   text-align: start;
+}
+
+
+nav.nav-contenido-content{
+   display: block;
+}
+.nav-contenido-content{
+   margin-block: 40px;
+}
+
+
+
+.nav-contenido-content>h4{
+   display: none;
+}
+
+.nav-contenido-content  summary{
+   font-weight: 700;
+   color: #000000;
+}
+.nav-contenido-content ol{
+   /* outline: green 1px solid; */
+   padding-inline: 0;
+   max-inline-size: 190px;
+}
+.nav-contenido-content li {
+   margin-block: 0;
+   block-size: 40px;
+   box-sizing: border-box;
+   /* border-block-end: 1px solid yellow; */
+   color: #000000;
+   border-radius: 4px;
+   list-style: none;   
+   
+   background-color: white;
+    inline-size: 100%;
+    counter-increment: contenido;
+}
+
+.nav-contenido-content li:hover {
+   /* display: block; */
+   background-color:#5551FF ;
+   color: #ffffff;
+   font-weight: 500;
+   cursor: pointer;
+}
+
+.nav-contenido-content a::before{
+   content: counter(contenido) ". ";
+   /* border: 1px solid yellow; */
+   inline-size: auto;
+   margin-inline-start: 3px;
+}
+
+.nav-contenido-content li a{
+   color: inherit;
+   font-weight: 400;
+   text-decoration: none;
+   /* border: 1px solid yellow; */
+   display: inline-block;
+   /* width: 100%; */
+   inline-size: 100%;
+   block-size:100%;
+   box-sizing: border-box;
+   padding-block: 8px;
+   padding-inline: 8px;
+}
+
+
+
+p, h1, h2, h3, h4, img {
+   text-align: center;
+}
+.h3-content{
+   text-align: center;
+}
+img{
+   align-self: center;
+   align-content: center;
+   margin: auto;
+}
+.main-content{
+   font-family: 'Rubik', sans-serif;
+}
+.main-content h1{
+   font-weight: 700;
+   font-size: 1.75rem;
+   line-height: 2rem;
+}
+
+.main-content .section-content p{
+   color: #545454;
+}
+
+.section-content h2{
+   color: #000000;
+   font-size: 2rem;
+   line-height: 2.37rem;
+}
+
+.section-content h3{
+   color: #000000;
+   font-size: 1.37rem;
+   line-height: 1.62rem;
+}
+
+.section-content h3::after{
+   content: revert;
+}
+
+.setup img {
+   block-size:40px 16px ;
+}
+
+.main p span{
+   color: #5551FF;
+   font-weight: 500;
+}
+
+
+blockquote{
+   border-color: #5551FF;
+   
+}
+
+.section-content blockquote p,.section-content blockquote p:last-of-type{
+   color :#000000;
+   font-size: 1rem;
+   line-height: 2rem;
+   text-align: start;
+}
+
+
+
+/* SECCION DESARROOLLO WEB */
+.des-web .h3-content{
+   margin-block-start: 40px;
+}
+
+
+.des-web pre {
+   background-color: #ffffff;
+   border-inline: 8px solid #5551FF;
+   border-block:  8px solid #5551FF;
+   
+
+   /* border-radius: 8px; */
+   border-start-start-radius:8px ; /* esquina superior izquierda o block-star e inline-start */
+   border-start-end-radius: 8px;/*esquina superior derecha o block-start e inline-end  */
+   border-end-start-radius: 8px;/*esquina inferior izquierda o block-end e inline-start*/
+   border-end-end-radius: 8px;/*esquina inferior derecha o block-end e inline-end */
+ 
+   box-shadow:-10px 10px 0 0 #ABAAF6;
+
+}
+
+.des-web code{
+   background-color: #ffffff;
+}
+
+
+/*  MODELO DE CAJA  */
+.modelo-caja p{
+   text-align: start;
+   color: #545454;
+}
+.modelo-caja ol{
+   color: #545454;
+}
+.modelo-caja h2{
+   font-size: 1.5rem;
+   text-align: start;
+   margin-block: 2.5rem;
+}
+
+.modelo-caja .h3-content{
+  margin-block: 2.5rem 1rem;
+   text-align: start;
+}
+
+.modelo-caja .h3-content h3{
+   text-align: start;
+   font-size: 1.375rem;
+   color: #000000;
+}
+
+.modelo-caja ul li::marker{
+   color: #5551FF;
+
+}
+
+.modelo-caja .h3-content:nth-of-type(4) h3{
+   /* border: 2px solid red; */
+   font-size: 1.5rem;
+}
+
+.slider-bullet{
+   background: #8E2DE280;
+
+}
+.slider-bullet:hover{
+   background-color: #5551FF;
+}
+/* .formulario */
+.modelo-caja p:last-of-type a{
+   color:  #545454;
+   font-weight: 500;
+}
+
+.section-formulario-contacto h3{
+   text-align: start;
+   font-size: 1.5rem;
+   line-height: 28px;
+}
+
+
+.section-formulario-contacto input::placeholder{
+   color: #000000;
+}
+
+.buttom-content button{
+   background-color: #5551FF;
+   color: #ffffff;
+   border: #5551FF;
+}
+
+
+.footer{
+   background-color: #000000;
+}
+
+
+@media screen and (min-width: 500px){
+
+   .header {
+      float: right;
+      overflow-y: auto;
+      direction: revert;
+      /* display: none; */
+   }
+   
+   .content-header {
+      margin-inline-start: 2px;
+
+      inline-size: auto;
+      /* border: 1px solid yellow; */
+      overflow-x: auto;
+      direction: revert; 
+   }
+   
+   
+   .main-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 3rem;
+   }
+
+   
+
+    .section-content h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+   }
+
+   
+   .section-content blockquote {
+      margin-inline: auto;
+      inline-size: 75%;
+      margin-block:4rem ;
+   }
+
+
+   .wrapper {
+      margin-inline: auto;
+      margin-inline-end: 10rem;
+      max-inline-size: 450px;
+      padding-inline: 1rem;
+   }
+
+   .modelo-caja {
+      margin-block: 100px 40px;
+   }
+   .modelo-caja>h2{
+      font-size: 2rem;
+   }
+
+}
+
+@media screen and (min-width: 650px) {
+   .wrapper {
+      margin-inline-end:  12rem;
+      /* margin-inline-start: 8rem; */
+      max-inline-size: 550px;
+   }
+}
+
+@media screen and (min-width: 700px){
+   .wrapper {
+      margin-inline: auto;
+      margin-inline-end: 13rem;
+      max-inline-size: 650px;
+      padding-inline: 1rem;
+   }
+}
+
+
+
+@media screen and (min-width: 900px) {
+   body .hero{
+
+      block-size: 200px;
+   }
+   .main-content h1 {
+      font-size: 3.75rem;
+      font-weight: 700;
+      line-height: 4rem;
+   }
+
+
+
+   .hero{
+      block-size: 200px;
+   }
+   .header {
+      max-inline-size: 300px;
+      /* border: #212121 solid 2px; */
+   }
+   .content-header {
+      max-inline-size: 320px;
+
+      /* border: 1px solid red; */
+   }
+
+   .wrapper {
+      margin-inline: auto;
+      margin-inline-end: 18rem;
+      max-inline-size: 900px;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   body .hero{
+      block-size: 300px;
+   }
+
+   .footer{
+      margin-block-start:120px;
+   }
+
+   .wrapper {
+      margin-inline: auto;
+      margin-inline-end: 21rem;
+      max-inline-size: 1100px;
+   }
+
+   .content-header {
+      max-inline-size: 320px;
+
+      /* border: 1px solid red; */
+   }
+}

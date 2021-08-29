@@ -50,30 +50,39 @@
       <meta name="theme-color" content="#ffffff" />
 
       <title>El Blog de Mi Primer Html</title>
-      <link href="./css/styles-logical.css" rel="stylesheet" />
+      <link href="./css/styles-logical-C.css" rel="stylesheet" />
    </head>
 
    <body>
       <div class="hero"></div>
       <header class="header">
+         <div class="wrapper"></div>
+      </header>
+      <main class="main">
          <div class="wrapper">
-            <div class="content-header">
-               <nav class="nav-pages-content">
-                  <h4>Variantes del proyecto</h4>
-                 
-                  <ul>
-                     <li><a href="./index.html">Nemium A</a></li>
-                     <li><a href="./index-B.html">Nemium B</a></li>
-                     <li><a href="./index-C.html">Nemium C</a></li>
-                     <li><a href="./index-D.html">Nemium D</a></li>
-                     <li><a href="./index-E.html">Nemium E</a></li>
-                  </ul>
-               </nav>
+            <div class="main-content">
+               <h1>Curso esencial de HTML y CSS</h1>
+               <p>
+                  Este es el inicio de tu carrera como Desarrollador Web, empezarás aprendiendo HTML
+                  y CSS para la creación de contenidos, en el nivel 2 aprenderás de componentes y en
+                  3 sobre layouts.
+               </p>
+               <section class="section-nav">
+                  <nav class="nav-pages-content">
+                     <h4>Variantes del proyecto</h4>
+                     <ul>
+                        <li><a href="./index.html">Nemium A</a></li>
+                        <li><a href="./index-B.html">Nemium B</a></li>
+                        <li><a href="./index-C.html">Nemium C</a></li>
+                        <li><a href="./index-D.html">Nemium D</a></li>
+                        <li><a href="./index-E.html">Nemium E</a></li>
+                     </ul>
+                  </nav>
 
-               <nav class="nav-contenido-content">
                   <h4>CONTENIDO</h4>
-                  <details>
-                     <summary>Setup</summary>
+                  <nav class="nav-contenido-content ">
+
+                     <h5>Setup</h5>
                      <ol>
                         <li>
                            <a href="#google-chrome">Google Chrome</a>
@@ -88,15 +97,8 @@
                            <a href="#github">Github</a>
                         </li>
                      </ol>
-                  </details>
 
-                  <details>
-                     <summary>Conceptos esenciales del Desarrollo Web</summary>
-                     <!-- <p>
-                        <a href="#conceptos-esenciales-desarrollo-web">
-                           Conceptos esenciales del Desarrollo Web
-                        </a>
-                     </p> -->
+                     <h5>Conceptos esenciales del Desarrollo Web</h5>
 
                      <ol>
                         <li>
@@ -118,20 +120,9 @@
                            <a href="#css">Qué es CSS</a>
                         </li>
                      </ol>
-                  </details>
-               </nav>
-            </div>
-         </div>
-      </header>
-      <main class="main">
-         <div class="wrapper">
-            <div class="main-content">
-               <h1>Curso esencial de HTML y CSS</h1>
-               <p>
-                  Este es el inicio de tu carrera como Desarrollador Web, empezarás aprendiendo HTML
-                  y CSS para la creación de contenidos, en el nivel 2 aprenderás de componentes y en
-                  3 sobre layouts.
-               </p>
+                  </nav>
+               </section>
+
                <hr />
                <!-- Section de Setup -->
                <section class="section-content setup">

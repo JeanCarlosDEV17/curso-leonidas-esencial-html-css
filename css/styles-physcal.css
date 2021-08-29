@@ -85,7 +85,7 @@ header {
    width: 208px;
 }
 
-header a {
+.header li {
    color: var(--gris10);
    font-weight: 400;
    text-decoration: none;
