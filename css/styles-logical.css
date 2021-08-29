@@ -99,7 +99,7 @@ a {
    position: static;
 }
 header a {
-   color: var(--blanco10);
+   color: #616161;
    font-weight: 400;
    text-decoration: none;
    /* line-height: 24px; */
@@ -683,7 +683,8 @@ img {
       /* word-wrap: break-word; */
    }
 }
-@media screen and (max-width: 380px) {
+/* TODO:  arrreglar el input del correo*/
+@media screen and (max-width: 650px) {
    .section-formulario-contacto button {
       inline-size: 90%;
       /* margin-inline: 4%; */
@@ -719,7 +720,7 @@ img {
       /* border: #157efb solid 2px; */
       float: left;
       block-size: 75vh;
-      max-inline-size: 195px;
+      max-inline-size: 175px;
       overflow-y: auto;
       direction: rtl;
    }
@@ -765,7 +766,7 @@ img {
    .wrapper {
       margin-inline: auto;
       /* TODO: PANTALLAS DE MAS DE 7OOPX 19REM */
-      margin-inline-start: 11rem;
+      margin-inline-start: 10rem;
       max-inline-size: 500px;
       padding-inline: 1rem;
    }
@@ -865,7 +866,8 @@ img {
 
 @media screen and (min-width: 700px) {
    .header {
-      max-inline-size: 260px;
+      max-inline-size: 230px;
+      border: #212121 solid 2px;
    }
    .content-header {
       max-inline-size: 200px;
@@ -877,7 +879,7 @@ img {
    }
    .wrapper {
       margin-inline: auto;
-      margin-inline-start: 15rem;
+      margin-inline-start: 13rem;
       max-inline-size: 700px;
    }
 }
