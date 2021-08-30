@@ -47,7 +47,7 @@ nav.nav-contenido-content{
 }
 .nav-contenido-content li {
    margin-block: 0;
-   block-size: 40px;
+   min-block-size: 40px;
    box-sizing: border-box;
    /* border-block-end: 1px solid yellow; */
    color: #000000;
@@ -265,12 +265,19 @@ blockquote{
       margin-inline-start: 2px;
 
       inline-size: auto;
+      max-inline-size: 94%;
       /* border: 1px solid yellow; */
       overflow-x: auto;
       direction: revert; 
    }
+   .nav-contenido-content details ol{
+      word-wrap: break-word;
+      padding-inline-start: 0px;
+
+   }
    
-   
+
+
    .main-content h1 {
       font-size: 2.5rem;
       font-weight: 700;
@@ -371,7 +378,7 @@ blockquote{
 
    .wrapper {
       margin-inline: auto;
-      margin-inline-end: 21rem;
+      margin-inline-end: 20rem;
       max-inline-size: 1100px;
    }
 

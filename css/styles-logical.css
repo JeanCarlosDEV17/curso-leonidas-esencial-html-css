@@ -217,6 +217,9 @@ nav.nav-contenido-content {
    cursor: pointer;
    inline-size: 100%;
 }
+.nav-contenido-content a {
+   text-decoration: none;
+}
 
 /* wrapper */
 .wrapper {
@@ -388,6 +391,7 @@ code {
    white-space: pre;
    /* border: 1px solid yellow; */
    overflow: scroll;
+   overflow-y: auto;
 }
 
 /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
@@ -648,13 +652,13 @@ input::placeholder {
    background-color: #212429;
    border: 1px solid transparent;
    align-items: center;
-   margin-block-start:40px ;
+   margin-block-start: 40px;
 }
 .content-footer {
    text-align: center;
 }
 .content-footer p {
-   color: #FFFFFF;
+   color: #ffffff;
    margin-block-start: 48px;
    /* margin-inline-end: 45px; */
    font-weight: 500;
@@ -688,17 +692,7 @@ img {
    }
 }
 /* TODO:  arrreglar el input del correo*/
-@media screen and (max-width: 650px) {
-   .section-formulario-contacto button {
-      inline-size: 90%;
-      /* margin-inline: 4%; */
 
-      max-inline-size: initial;
-      position: initial;
-      margin-block-start: 16px;
-      margin-inline: 10px;
-   }
-}
 @media screen and (min-width: 300px) {
    .main-content p {
       word-break: initial;
@@ -714,25 +708,38 @@ img {
       background: linear-gradient(to top, #ffffff55, transparent 35%), url("../images/patron-1.png");
       inline-size: 100%;
       max-inline-size: 100%;
-      block-size: 130px;
+      block-size: 96px;
    }
    .header {
       position: sticky;
-      /* top: 0; */
-      inset-block-start: -30px;
+      inset-block-start: 20px;
       /* display: inline-block; */
       /* border: #157efb solid 2px; */
       float: left;
-      block-size: 75vh;
-      max-inline-size: 175px;
+      /* block-size: 78vh; */
+      min-block-size: 64vh;
+      max-block-size: 70vh;
+      block-size: auto;
+      max-inline-size: 170px;
+      inline-size: auto;
+      /* min-inline-size: 150px; */
       overflow-y: auto;
       direction: rtl;
+      padding-inline: 0px;
+      padding-block-end: 10px;
+      padding-inline-end: 5px;
    }
+
+   .header .wrapper {
+      padding-inline: 0;
+   }
+
    .nav-pages-content {
       margin-block-end: 30px;
+      margin-inline-end: 0px;
    }
    nav.nav-contenido-content {
-      display: initial;
+      display: block;
    }
 
    h1 {
@@ -751,19 +758,39 @@ img {
    .content-header {
       position: absolute;
       inset-inline-start: 1px;
-      inset-block-start: 40px;
+      inset-block-start: 0px;
       margin-inline-end: 2px;
-
+      margin-inline-start: 10px;
+      
       font-size: 14px;
-      max-inline-size: 150px;
-      inline-size: auto;
-      /* border: 1px solid yellow; */
-      /* se */
+      max-inline-size: 140px;
+      min-inline-size: revert;
+      /* border: 1px solid black; */
+      padding-inline: 2px;
+
       block-size: auto;
       /* border: 1px solid blue; */
-      max-block-size: 63vh;
-      /* overflow-y: auto; */
+
       direction: ltr; /* para posicionar el scroll a la izquierda */
+   }
+   .nav-contenido-content details{
+      padding-inline-end: 2px;
+   }
+
+   .nav-contenido-content details ol{
+      word-wrap: break-word;
+      padding-inline-start: 24px;
+
+   }
+
+   .nav-contenido-content details:last-of-type summary {
+      margin-block-end: 0;
+      /* border: 1px solid red; */
+   }
+   .nav-contenido-content details:last-of-type ol {
+      /* border: 1px solid red; */
+      margin-block-end: 0px;
+      word-wrap: break-word;
    }
 
    /* WRAPPER */
@@ -785,7 +812,7 @@ img {
    .main-content p {
       font-weight: 400;
    }
-   .main-content hr{
+   .main-content hr {
       margin-block: 64px;
    }
    .main-content h2 {
@@ -803,7 +830,7 @@ img {
    } */
 
    blockquote {
-      margin-block: 2rem ;
+      margin-block: 2rem;
       /* padding-inline: 1.5rem;
       padding-block: 1.5rem; */
       font-size: 1.5rem;
@@ -812,11 +839,11 @@ img {
       line-height: 2rem;
    }
    .section-content blockquote p:last-of-type {
-      margin-block-start:16px ;
+      margin-block-start: 16px;
    }
 
    /* SECCION DESARROLLO WEB  */
-   .des-web h2{
+   .des-web h2 {
       margin-block: 4rem 2.5rem;
    }
    .des-web .h3-content {
@@ -870,10 +897,27 @@ img {
       /* border: 2px solid yellow;  */
    }
 }
+@media screen and (max-width: 650px) {
+   .section-formulario-contacto button {
+      inline-size: 90%;
+      /* margin-inline: 4%; */
 
+      max-inline-size: initial;
+      position: initial;
+      margin-block-start: 16px;
+      margin-inline: 10px;
+   }
+}
 @media screen and (min-width: 700px) {
    .header {
+      inset-block-start: 20px;
+      /* block-size: 78vh; */
+      
+   }
+   .header {
       max-inline-size: 230px;
+      /* block-size: 78vh; */
+      max-block-size: 70vh;
       /* border: #212121 solid 2px; */
    }
    .content-header {
@@ -889,17 +933,19 @@ img {
       margin-inline-start: 13rem;
       max-inline-size: 700px;
    }
-   .footer{
-      margin-block-start:90px ;
+   .footer {
+      margin-block-start: 90px;
    }
 }
 
 @media screen and (min-width: 900px) {
-   .hero{
+   .hero {
       block-size: 200px;
    }
    .header {
       max-inline-size: 300px;
+      /* block-size: 78vh; */
+      /* min-block-size: 76vh; */
       /* border: #212121 solid 2px; */
    }
    .content-header {
@@ -913,12 +959,9 @@ img {
       margin-inline-start: 18rem;
       max-inline-size: 900px;
    }
-
-   
-   
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
    .section-formulario-contacto input[name="nombre"],
    .buttom-content {
       display: inline-block;
@@ -931,8 +974,7 @@ img {
       inline-size: 90%;
    }
 
-   .footer{
-      margin-block-start:100px ;
+   .footer {
+      margin-block-start: 100px;
    }
-   
 }

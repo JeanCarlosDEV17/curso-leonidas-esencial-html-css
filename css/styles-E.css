@@ -1,0 +1,352 @@
+html {
+   background-color: #232946;
+}
+
+body {
+   background-color: #232946;
+   color: #b8c1ec;
+   font-family: "Montserrat", "Roboto", sans-serif;
+}
+
+.hero {
+   display: none;
+}
+
+h1 {
+   font-weight: 700;
+   font-size: 2rem;
+   color: #fff;
+}
+h2 {
+   font-weight: 700;
+   font-size: 2rem;
+   color: #fff;
+}
+h3 {
+   font-weight: 700;
+   font-size: 1.5rem;
+   color: #fff;
+}
+h4 {
+   font-weight: 700;
+   color: #fff;
+}
+
+.content-header {
+   margin-block: 24px 40px;
+   margin-inline: auto;
+   margin-inline-start: 27px;
+   padding-block: 0;
+   padding-inline: 0;
+}
+
+.nav-pages-content {
+   font-family: "Roboto", sans-serif;
+}
+
+.content-header .nav-pages-content h4 {
+   font-weight: 400;
+}
+.content-header .content-header h4 {
+   color: #fff;
+   margin-block-end: 24px;
+}
+
+.content-header a {
+   color: #b8c1ec;
+}
+.content-header a:hover {
+   color: #fff;
+}
+
+.content-header .nav-contenido-content {
+   display: block;
+}
+
+.content-header summary {
+   font-weight: 700;
+   color: #fff;
+}
+
+.nav-contenido-content {
+   margin-block: 40px;
+}
+
+.nav-contenido-content ol {
+   padding-inline-start: 16px;
+}
+.nav-contenido-content li {
+   color: #b8c1ec;
+   margin-block-start: 16px;
+}
+
+.nav-contenido-content a {
+   text-decoration: none;
+}
+
+.main-content hr:nth-of-type(2) {
+   display: none;
+}
+
+/* Main content */
+
+.main-content h1 {
+   font-weight: 700;
+   font-size: 2rem;
+   color: #fff;
+   line-height: 39px;
+}
+.section-content h2 {
+   margin-block: 40px;
+}
+
+.section-content h3::after {
+   content: none;
+}
+
+.main-content hr:first-of-type {
+   display: block;
+}
+
+.setup img {
+   inline-size: 40px;
+   margin-block: 40px 16px;
+}
+
+.h3-content h3 {
+   font-weight: 600;
+}
+
+.section-content blockquote {
+   background-color: #d4939d;
+   color: #232946;
+   padding-block: 16px;
+   padding-inline: 16px;
+   border-color: #d4939d;
+}
+.section-content blockquote p:last-of-type {
+   background-color: #d4939d;
+   color: #232946;
+   margin-block: 16px;
+}
+.section-content blockquote p {
+   background-color: #d4939d;
+   color: #232946;
+   margin-block: 16px;
+}
+
+/* SECCION DESARROLLO WEB */
+
+.des-web .h3-content {
+   margin-block: 40px 16px;
+}
+
+.des-web h3::before{
+   content: none;
+}
+
+.des-web pre code {
+   background-color: transparent;
+}
+.des-web pre {
+   background-color: transparent;
+   overflow-y: auto;
+}
+.des-web code {
+   color: #fffffe;
+   overflow-y: auto;
+}
+
+.des-web img {
+   margin-block: 16px 40px;
+}
+
+/* MODELO DE CAJA */
+
+.modelo-caja h2 {
+   margin-block: 40px 24px;
+}
+
+.modelo-caja .h3-content h3 {
+   color: #fffffe;
+   font-weight: 600;
+   font-size: 2rem;
+}
+.modelo-caja .h3-content:nth-of-type(1) h3 {
+   font-size: 1.5rem;
+   font-weight: 400;
+}
+
+.modelo-caja .h3-content:nth-of-type(4) h3 {
+   font-size: 1.5rem;
+   font-weight: 400;
+}
+
+.slider-bullet {
+   background-color: var(--gris30);
+}
+.slider-bullet:hover {
+   background-color: #fff;
+}
+.modelo-caja p:last-of-type {
+   color: #fff;
+}
+.modelo-caja p:last-of-type a {
+   color: #d4939d;
+}
+
+/* FORMULARIO */
+
+.section-formulario-contacto input {
+   border-color: #fff;
+   border-radius: 8px;
+}
+input::placeholder {
+   color: #fff;
+}
+
+.section-formulario-contacto button {
+   background-color: #eebbc3;
+   color: #232946;
+   inline-size: 100%;
+   margin-inline: auto;
+   border-color: #eebbc3;
+   border-radius: 8px;
+   font-weight: 600;
+   max-inline-size: 100%;
+   margin-block: 1.5rem 2.5rem;
+   position: static;
+}
+
+.footer {
+   background-color: #eebbc3;
+   color: #232946;
+}
+.footer p {
+   color: #232946;
+   font-family: "Roboto", sans-serif;
+}
+
+@media screen and (min-width: 500px) {
+   .main-content hr:nth-of-type(2) {
+      display: block;
+   }
+   .main-content hr:nth-of-type(1) {
+      display: none;
+   }
+
+   .header {
+      inset-block-start: 20px;
+      /* block-size: 78vh; */
+      min-block-size: 70vh;
+      /* border: 1px solid blue; */
+   }
+   .content-header {
+      margin-inline-start: 16px;
+   }
+
+   nav.nav-contenido-content {
+      display: block;
+   }
+   .nav-contenido-content details {
+      /* max-inline-size: 98%; */
+      /* outline: 1px solid yellow; */
+      padding-inline-end: 3px;
+   }
+
+   .nav-contenido-content ol {
+      max-inline-size: 100%;
+      padding-inline-start: 20px;
+   }
+   .nav-contenido-content li {
+      max-inline-size: 100%;
+   }
+
+   .content-header {
+      position: absolute;
+      inset-inline-start: 1px;
+      inset-block-start: 0px;
+      margin-inline-end: 2px;
+      margin-block: 0;
+   }
+   
+   .content-header .nav-pages-content h4 {
+      margin-block-start: 8px;
+   }
+
+   .main-content h1 {
+      /* font-size: 1.5rem; */
+      margin-block-start: 4rem;
+      margin-bottom: 1rem;
+      font-size: 3rem;
+      line-height: 3.2rem;
+   }
+}
+
+@media screen and (min-width: 700px) {
+   .header {
+      inset-block-start: 20px;
+      /* block-size: 78vh; */
+      max-block-size: 70vh;
+   }
+   .nav-contenido-content ol {
+      padding-inline-start: 28px;
+   }
+   .main-content{
+      margin-block-start: 100px;
+   }
+   .main-content h1 {
+      margin-block-start: 4rem;
+      line-height: 4.5rem;
+   }
+   .section-content h2{
+      font-size: 2.5rem;
+      line-height: 3rem;
+   }
+   .setup img{
+      inline-size: 80px;
+   }
+
+   .section-content h3{
+      font-size: 2rem;
+      line-height: 2.5rem;
+   }
+
+   .setup blockquote{
+      margin-block: 58px 30px;
+
+   }
+
+   .des-web h2{
+      margin-block-start: 30px;
+      line-height: 3rem;
+   }
+
+
+   .modelo-caja{
+      margin-block-start: 80px;
+   }
+   .modelo-caja h2{
+      line-height: 2.5rem;
+      font-size: 2rem;
+   }
+
+   .modelo-caja .h3-content:nth-of-type(4){
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .section-formulario-contacto input[name="nombre"],
+   .buttom-content {
+      display: block;
+      inline-size: 100%;
+   }
+   .buttom-content {
+      margin-inline-start: 0;
+   }
+   .buttom-content input[type="email"] {
+      inline-size: 100%;
+   }
+}

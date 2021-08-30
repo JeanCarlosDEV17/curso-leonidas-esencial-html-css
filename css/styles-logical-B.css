@@ -680,6 +680,11 @@ img {
    nav.nav-contenido-content {
       display: initial;
    }
+   .nav-contenido-content details ol{
+      word-wrap: break-word;
+      padding-inline-start: 24px;
+
+   }
 
    h1 {
       font-size: 2.5rem;
